@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TOOLFLUX | TF-CCMT09T304/08 Datasheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  /* ═══════════════════════════════
+     TOKENS
+  ═══════════════════════════════ */
+  :root {
+    --black:   #090a0c;
+    --dark:    #111316;
+    --card:    #15171b;
+    --card2:   #1a1d22;
+    --border:  #252830;
+    --accent:  #e8b84b;
+    --accent2: #c9472f;
+    --text:    #dde0e8;
+    --muted:   #6e7480;
+    --green:   #3ecf72;
+    --blue:    #5b9cf6;
+    --radius: 4px;
+    --fs-xs:  10px;
+    --fs-sm:  12px;
+    --fs-base: 13px;
+    --fs-lg:  15px;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-size: var(--fs-base);
+    line-height: 1.65;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    background: var(--dark);
+    border-bottom: 2px solid var(--accent);
+    padding: clamp(14px, 3vw, 24px) clamp(16px, 5vw, 44px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(26px, 5vw, 40px);
+    letter-spacing: 6px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .logo-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+  .doc-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    line-height: 2;
+    text-align: right;
+  }
+  .doc-meta span { color: var(--accent); }
+  .hero {
+    background: linear-gradient(135deg, #14161b 0%, #1b1e25 55%, #111316 100%);
+    border-bottom: 1px solid var(--border);
+    padding: clamp(24px, 5vw, 44px) clamp(16px, 5vw, 44px);
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'CCMT';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(80px, 18vw, 180px);
+    color: rgba(232,184,75,0.04);
+    position: absolute;
+    right: -8px;
+    top: -20px;
+    letter-spacing: -2px;
+    pointer-events: none;
+    user-select: none;
+  }
+  .part-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 8vw, 56px);
+    letter-spacing: 2px;
+    color: var(--text);
+    line-height: 1;
+  }
+  .part-number .hl { color: var(--accent); }
+  .part-desc {
+    font-size: clamp(11px, 2vw, 13px);
+    color: var(--muted);
+    margin-top: 8px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 16px;
+  }
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .b-gold  { background: rgba(232,184,75,0.13); color: var(--accent);  border: 1px solid rgba(232,184,75,0.28); }
+  .b-green { background: rgba(62,207,114,0.1);  color: var(--green);   border: 1px solid rgba(62,207,114,0.28); }
+  .b-red   { background: rgba(201,71,47,0.12);  color: #e06b55;        border: 1px solid rgba(201,71,47,0.28); }
+  .b-grey  { background: rgba(255,255,255,0.04); color: var(--muted);  border: 1px solid var(--border); }
+  .insert-visual { width: clamp(90px, 14vw, 140px); flex-shrink: 0; }
+  .insert-visual svg { width: 100%; height: auto; }
+  /* QR code in hero */
+  .hero-qr {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-qr .qr-wrap {
+    border: 2px solid rgba(232,184,75,0.35);
+    border-radius: 4px;
+    background: #fff;
+    padding: 4px;
+    line-height: 0;
+  }
+  .hero-qr-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  main {
+    padding: clamp(16px, 4vw, 32px) clamp(16px, 5vw, 44px) 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 16px;
+  }
+  .span2 { grid-column: 1 / -1; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    animation: fadeUp .45s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(14px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .card:nth-child(1) { animation-delay:.05s }
+  .card:nth-child(2) { animation-delay:.10s }
+  .card:nth-child(3) { animation-delay:.13s }
+  .card:nth-child(4) { animation-delay:.16s }
+  .card:nth-child(5) { animation-delay:.19s }
+  .card:nth-child(6) { animation-delay:.22s }
+  .card:nth-child(7) { animation-delay:.25s }
+  .card-head {
+    background: rgba(232,184,75,0.06);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .card-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .card-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .card-body { padding: 16px; }
+  .spec-tbl { width: 100%; border-collapse: collapse; }
+  .spec-tbl tr { border-bottom: 1px solid var(--border); }
+  .spec-tbl tr:last-child { border-bottom: none; }
+  .spec-tbl td { padding: 9px 4px; vertical-align: middle; }
+  .spec-tbl td:first-child {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    width: 46%;
+  }
+  .spec-tbl td:last-child {
+    font-family: 'DM Mono', monospace;
+    font-size: var(--fs-sm);
+    color: var(--text);
+    font-weight: 500;
+  }
+  .var-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .var-card {
+    background: rgba(232,184,75,0.04);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 14px 12px;
+  }
+  .var-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(18px, 4vw, 24px);
+    letter-spacing: 1px;
+    color: var(--text);
+    line-height: 1;
+  }
+  .var-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    margin-top: 2px;
+  }
+  .var-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-sm);
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .var-row:last-of-type { border-bottom: none; }
+  .var-row span:first-child { color: var(--muted); }
+  .var-row span:last-child  { font-family: 'DM Mono', monospace; color: var(--text); font-size: 11px; }
+  .var-use {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .iso-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: clamp(5px, 1.5vw, 10px);
+  }
+  .iso-chip {
+    border-radius: 3px;
+    padding: clamp(8px, 2vw, 12px) 4px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .iso-letter { font-size: clamp(14px, 3.5vw, 20px); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; }
+  .iso-label  { font-size: clamp(7px, 1.5vw, 9px); letter-spacing: 0.3px; opacity: 0.75; text-transform: uppercase; }
+  .iso-P { background:rgba(30,100,220,0.12); border-color:rgba(30,100,220,0.4); color:#6aa0ff; }
+  .iso-M { background:rgba(255,200,0,0.10);  border-color:rgba(255,200,0,0.35); color:#ffd84a; }
+  .iso-K { background:rgba(220,50,50,0.10);  border-color:rgba(220,50,50,0.35); color:#ff7a6a; }
+  .iso-N { background:rgba(0,200,150,0.08);  border-color:rgba(0,200,150,0.2);  color:#3ecfa0; }
+  .iso-S { background:rgba(200,100,0,0.08);  border-color:rgba(200,100,0,0.2);  color:#ffaa55; }
+  .iso-H { background:rgba(140,0,220,0.08);  border-color:rgba(140,0,220,0.2);  color:#c080ff; }
+  .iso-active:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(232,184,75,0.15); }
+  .iso-inactive { opacity: 0.28; filter: grayscale(0.7); }
+  .iso-note {
+    margin-top: 12px;
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+  }
+  .cut-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cut-tbl {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+  }
+  .cut-tbl th {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    background: rgba(255,255,255,0.02);
+    white-space: nowrap;
+  }
+  .cut-tbl td {
+    padding: 10px 10px;
+    font-size: var(--fs-sm);
+    border-bottom: 1px solid rgba(37,40,48,0.7);
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .cut-tbl tr:last-child td { border-bottom: none; }
+  .cut-tbl td.mat { color: var(--muted); white-space: normal; }
+  .rec-dot {
+    display: inline-block;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--green);
+    margin-right: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+  .mono { font-family: 'DM Mono', monospace; color: var(--text); }
+  .range { font-family: 'DM Mono', monospace; color: var(--accent); }
+  .cut-note {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    line-height: 1.8;
+  }
+  .coat-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .coat-row:last-of-type { border-bottom: none; }
+  .coat-icon {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: rgba(232,184,75,0.08);
+    border: 1px solid rgba(232,184,75,0.22);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .coat-label { font-size: var(--fs-sm); font-weight: 700; color: var(--text); }
+  .coat-desc  { font-size: 11px; color: var(--muted); margin-top: 3px; line-height: 1.55; }
+  .perf-wrap { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .perf-row { display: flex; flex-direction: column; gap: 3px; }
+  .perf-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .perf-bg { background: rgba(255,255,255,0.05); border-radius: 2px; height: 5px; overflow: hidden; }
+  .perf-fill { height: 100%; border-radius: 2px; }
+  .fill-gold  { background: linear-gradient(90deg, var(--accent), #f0c060); width: 85%; }
+  .fill-green { background: linear-gradient(90deg, var(--green), #50e090);  width: 72%; }
+  .fill-blue  { background: linear-gradient(90deg, var(--blue),  #90c0ff);  width: 80%; }
+  .pn-highlight {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(11px, 2.5vw, 13px);
+    color: var(--accent);
+    background: rgba(232,184,75,0.08);
+    border: 1px solid rgba(232,184,75,0.22);
+    border-radius: 3px;
+    padding: 2px 8px;
+    display: inline-block;
+    margin-bottom: 2px;
+  }
+  .screw-box {
+    background: rgba(91,156,246,0.07);
+    border: 1px solid rgba(91,156,246,0.25);
+    border-radius: 3px;
+    padding: 12px 14px;
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .screw-icon { font-size: 20px; margin-top: 2px; }
+  .screw-label { font-size: var(--fs-sm); font-weight: 700; color: var(--blue); }
+  .screw-desc  { font-size: 11px; color: var(--muted); margin-top: 3px; line-height: 1.55; }
+
+  /* ═══════════════════════════════
+     QR SECTION IN FOOTER
+  ═══════════════════════════════ */
+  .qr-section {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: clamp(16px, 3vw, 28px) clamp(16px, 5vw, 44px);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .qr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .qr-block .qr-wrap {
+    border: 2px solid rgba(232,184,75,0.4);
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 6px;
+    line-height: 0;
+  }
+  .qr-block-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .qr-info {
+    flex: 1;
+    min-width: 200px;
+  }
+  .qr-info-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .qr-info-body {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-family: 'DM Mono', monospace;
+  }
+  .qr-info-body strong { color: var(--text); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--dark);
+    padding: clamp(12px, 3vw, 18px) clamp(16px, 5vw, 44px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--accent);
+  }
+  .footer-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.8px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+  }
+  .footer-url {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+  @media (max-width: 520px) {
+    .hero { grid-template-columns: 1fr; }
+    .insert-visual { display: none; }
+    .hero-qr { display: none; }
+    .var-grid { grid-template-columns: 1fr; }
+    .iso-grid { grid-template-columns: repeat(3, 1fr); }
+    .doc-meta { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-note { text-align: center; }
+  }
+  @media (min-width: 900px) {
+    main { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div>
+    <div class="logo">TOOLFLUX</div>
+    <div class="logo-sub">Precision Cutting Solutions · Industrial Grade</div>
+  </div>
+  <div class="doc-meta">
+    <div>DOC TYPE &nbsp;·&nbsp; <span>INSERT DATASHEET</span></div>
+    <div>SERIES &nbsp;·&nbsp; <span>TF-TURN STANDARD</span></div>
+    <div>REV &nbsp;·&nbsp; <span>01.1</span></div>
+    <div>DATE &nbsp;·&nbsp; <span>MAY 2026</span></div>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <div>
+    <div class="part-number">CCMT<span class="hl">09T3</span>04 / 08</div>
+    <div class="part-desc">80° Diamond · 7° Positive Clearance · CVD Multilayer Coated Carbide · Internal &amp; External Turning</div>
+    <div class="badge-row">
+      <span class="badge b-gold">TF-P15 Grade</span>
+      <span class="badge b-green">ISO P · M · K</span>
+      <span class="badge b-red">CVD TiCN + Al₂O₃ + TiN</span>
+      <span class="badge b-grey">Wear Indicator Layer</span>
+    </div>
+  </div>
+  <div class="insert-visual">
+    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="rg" cx="50%" cy="40%" r="55%">
+          <stop offset="0%" stop-color="#252830"/>
+          <stop offset="100%" stop-color="#14161b"/>
+        </radialGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <polygon points="65,12 110,48 110,84 65,118 20,84 20,48"
+               fill="url(#rg)" stroke="#e8b84b" stroke-width="1.4" filter="url(#glow)"/>
+      <line x1="20" y1="48" x2="65" y2="12" stroke="#e8b84b" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="20" cy="48" r="4.5" fill="#e8b84b" opacity="0.85"/>
+      <circle cx="65" cy="65" r="8" fill="none" stroke="#e8b84b" stroke-width="1" opacity="0.55"/>
+      <polygon points="65,12 110,48 110,84 65,118 20,84 20,48"
+               fill="rgba(232,184,75,0.04)"/>
+      <text x="65" y="135" text-anchor="middle" fill="#6e7480" font-size="7"
+            font-family="DM Mono, monospace">IC 9.525 mm</text>
+    </svg>
+  </div>
+  <!-- HERO QR -->
+  <div class="hero-qr">
+    <div class="qr-wrap"><div id="qrHero"></div></div>
+    <div class="hero-qr-label">Scan · Full Datasheet</div>
+  </div>
+</div>
+
+<!-- ══════════ MAIN CONTENT ══════════ -->
+<main>
+  <!-- 1 · GEOMETRY -->
+  <div class="card">
+    <div class="card-head"><div class="card-dot"></div><div class="card-title">Insert Geometry</div></div>
+    <div class="card-body">
+      <table class="spec-tbl">
+        <tr><td>Shape Code</td><td>C — 80° Diamond (Rhombic)</td></tr>
+        <tr><td>Clearance Angle</td><td>C — 7° Positive</td></tr>
+        <tr><td>Tolerance Class</td><td>M</td></tr>
+        <tr><td>Type / Seat</td><td>T — Hole + Chipbreaker Both Faces</td></tr>
+        <tr><td>Inscribed Circle (IC)</td><td>9.525 mm (3/8")</td></tr>
+        <tr><td>Insert Thickness (S)</td><td>3.97 mm</td></tr>
+        <tr><td>Edge Length (L)</td><td>9.7 mm</td></tr>
+        <tr><td>Point Angle</td><td>80°</td></tr>
+        <tr><td>Rake Angle</td><td>Positive</td></tr>
+        <tr><td>Cutting Direction</td><td>Neutral (Both)</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2 · VARIANT COMPARE -->
+  <div class="card">
+    <div class="card-head"><div class="card-dot"></div><div class="card-title">Variant Comparison</div></div>
+    <div class="card-body">
+      <div class="var-grid">
+        <div class="var-card">
+          <div class="var-name">CCMT09T304</div>
+          <div class="var-sub">TF-P15 · Nose Radius 0.4 mm</div>
+          <div class="var-row"><span>Nose Radius</span><span>0.4 mm (r04)</span></div>
+          <div class="var-row"><span>Ideal Feed</span><span>0.10–0.20 mm/rev</span></div>
+          <div class="var-row"><span>Max Feed</span><span>≤ 0.25 mm/rev</span></div>
+          <div class="var-row"><span>Surface Ra</span><span>0.8–1.6 µm</span></div>
+          <div class="var-row"><span>ap (typical)</span><span>0.3–2.0 mm</span></div>
+          <div class="var-use">✔ Finishing / Semi-Finish</div>
+        </div>
+        <div class="var-card">
+          <div class="var-name">CCMT09T308</div>
+          <div class="var-sub">TF-P15 · Nose Radius 0.8 mm</div>
+          <div class="var-row"><span>Nose Radius</span><span>0.8 mm (r08)</span></div>
+          <div class="var-row"><span>Ideal Feed</span><span>0.15–0.35 mm/rev</span></div>
+          <div class="var-row"><span>Max Feed</span><span>≤ 0.40 mm/rev</span></div>
+          <div class="var-row"><span>Surface Ra</span><span>1.6–3.2 µm</span></div>
+          <div class="var-row"><span>ap (typical)</span><span>1.0–4.0 mm</span></div>
+          <div class="var-use">✔ Semi-Finish / Medium Roughing</div>
+        </div>
+      </div>
+      <p style="margin-top:12px; font-size:11px; color:var(--muted);">
+        Rule of thumb: maximum feed should not exceed <strong style="color:var(--text)">½ the nose radius</strong> for clean surface finish. Larger nose radius (08) distributes heat better and allows heavier feeds.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3 · ISO MATERIAL -->
+  <div class="card span2">
+    <div class="card-head"><div class="card-dot"></div><div class="card-title">ISO Material Applicability</div></div>
+    <div class="card-body">
+      <div class="iso-grid">
+        <div class="iso-chip iso-P iso-active" title="Steel — Primary">
+          <div class="iso-letter">P</div><div class="iso-label">Steel</div>
+        </div>
+        <div class="iso-chip iso-M iso-active" title="Stainless Steel — Secondary">
+          <div class="iso-letter">M</div><div class="iso-label">Stainless</div>
+        </div>
+        <div class="iso-chip iso-K iso-active" title="Cast Iron — Secondary">
+          <div class="iso-letter">K</div><div class="iso-label">Cast Iron</div>
+        </div>
+        <div class="iso-chip iso-N iso-inactive" title="Non-Ferrous — Not Recommended">
+          <div class="iso-letter">N</div><div class="iso-label">Non-Ferrous</div>
+        </div>
+        <div class="iso-chip iso-S iso-inactive" title="Super Alloys — Not Recommended">
+          <div class="iso-letter">S</div><div class="iso-label">Super Alloy</div>
+        </div>
+        <div class="iso-chip iso-H iso-inactive" title="Hardened Materials — Not Recommended">
+          <div class="iso-letter">H</div><div class="iso-label">Hardened</div>
+        </div>
+      </div>
+      <div class="iso-note">
+        PRIMARY · P — Carbon Steel, Alloy Steel, Tool Steel (≤320 HB)<br>
+        SECONDARY · M — Austenitic Stainless (304, 316) &nbsp;|&nbsp; K — Grey &amp; Ductile Cast Iron<br>
+        NOT RECOMMENDED · N, S, H — Use dedicated PCD / CBN / PVD grades for these groups
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 · CUTTING DATA -->
+  <div class="card span2">
+    <div class="card-head"><div class="card-dot"></div><div class="card-title">Cutting Data — Recommended Parameters (CVD Coated Carbide, ISO Standard Conditions)</div></div>
+    <div class="card-body">
+      <div class="cut-wrap">
+        <table class="cut-tbl">
+          <thead>
+            <tr>
+              <th>Material Group</th>
+              <th>Hardness</th>
+              <th>Vc (m/min)</th>
+              <th>f · 09T304, r0.4 (mm/rev)</th>
+              <th>f · 09T308, r0.8 (mm/rev)</th>
+              <th>ap (mm)</th>
+              <th>Coolant</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mat"><span class="rec-dot"></span>Carbon Steel — C45, mild (P1)</td>
+              <td class="mono">≤ 200 HB</td>
+              <td class="range">200 – 300</td>
+              <td class="mono">0.10 – 0.20</td>
+              <td class="mono">0.15 – 0.35</td>
+              <td class="mono">0.3 – 3.0</td>
+              <td class="mono">Optional</td>
+            </tr>
+            <tr>
+              <td class="mat"><span class="rec-dot"></span>Alloy Steel — SCM, 42CrMo4 (P2)</td>
+              <td class="mono">200–320 HB</td>
+              <td class="range">150 – 250</td>
+              <td class="mono">0.10 – 0.18</td>
+              <td class="mono">0.15 – 0.30</td>
+              <td class="mono">0.3 – 2.5</td>
+              <td class="mono">Recommended</td>
+            </tr>
+            <tr>
+              <td class="mat">Stainless 304 / 316L (M1)</td>
+              <td class="mono">150–220 HB</td>
+              <td class="range">100 – 160</td>
+              <td class="mono">0.08 – 0.15</td>
+              <td class="mono">0.12 – 0.25</td>
+              <td class="mono">0.3 – 2.0</td>
+              <td class="mono">Required</td>
+            </tr>
+            <tr>
+              <td class="mat">Grey Cast Iron GG25 (K1)</td>
+              <td class="mono">180–240 HB</td>
+              <td class="range">120 – 200</td>
+              <td class="mono">0.10 – 0.20</td>
+              <td class="mono">0.15 – 0.35</td>
+              <td class="mono">0.3 – 3.5</td>
+              <td class="mono">Dry / Optional</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cut-note">
+        ● Green dots = primary recommended applications &nbsp;·&nbsp; Vc = cutting speed &nbsp;·&nbsp; f = feed per revolution &nbsp;·&nbsp; ap = axial depth of cut<br>
+        ⚠ Start at the lower end of Vc and f. Increase once chip form and surface finish are confirmed stable on your machine.<br>
+        ⚠ These are indicative values for CVD-coated carbide grade, positive geometry. Verify on machine before production.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 · GRADE & COATING -->
+  <div class="card">
+    <div class="card-head"><div class="card-dot"></div><div class="card-title">Grade TF-P15 — Coating Architecture</div></div>
+    <div class="card-body">
+      <div class="coat-row">
+        <div class="coat-icon">⬡</div>
+        <div>
+          <div class="coat-label">CVD Multilayer — Ti(C,N) + Al₂O₃ + TiN</div>
+          <div class="coat-desc">Three-layer Chemical Vapour Deposition. TiCN base provides substrate adhesion and hardness. Alumina mid-layer is a thermal barrier that resists cratering at high speeds. TiN outer layer serves as a gold-coloured wear indicator — edge is worn when gold disappears.</div>
+        </div>
+      </div>
+      <div class="coat-row">
+        <div class="coat-icon">◈</div>
+        <div>
+          <div class="coat-label">Fine-Grain WC-Co Substrate</div>
+          <div class="coat-desc">Tungsten Carbide with Cobalt binder, fine-grain structure. Hardness ≈ 1580–1640 HV. Equivalent ISO range: P10–P25. Balanced wear resistance and toughness for stable continuous turning.</div>
+        </div>
+      </div>
+      <div class="coat-row">
+        <div class="coat-icon">◉</div>
+        <div>
+          <div class="coat-label">Gold TiN Wear Indicator</div>
+          <div class="coat-desc">Outer TiN layer is gold-coloured when new. As the cutting edge wears, the gold colour disappears at the contact zone — operator can visually detect worn edges instantly without measurement tools.</div>
+        </div>
+      </div>
+      <div class="perf-wrap">
+        <div class="perf-row">
+          <div class="perf-labels"><span>Wear Resistance</span><span>High</span></div>
+          <div class="perf-bg"><div class="perf-fill fill-gold"></div></div>
+        </div>
+        <div class="perf-row">
+          <div class="perf-labels"><span>Toughness</span><span>Medium-High</span></div>
+          <div class="perf-bg"><div class="perf-fill fill-green"></div></div>
+        </div>
+        <div class="perf-row">
+          <div class="perf-labels"><span>Heat Resistance</span><span>High</span></div>
+          <div class="perf-bg"><div class="perf-fill fill-blue"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 · PART NUMBERS & ORDERING -->
+  <div class="card">
+    <div class="card-head"><div class="card-dot"></div><div class="card-title">TOOLFLUX Part Numbers &amp; Ordering</div></div>
+    <div class="card-body">
+      <table class="spec-tbl">
+        <tr>
+          <td>Part No. (r0.4)</td>
+          <td><span class="pn-highlight">TF-CCMT09T304-P15</span></td>
+        </tr>
+        <tr>
+          <td>Part No. (r0.8)</td>
+          <td><span class="pn-highlight">TF-CCMT09T308-P15</span></td>
+        </tr>
+        <tr><td>Grade</td><td>TF-P15 (CVD Coated Carbide)</td></tr>
+        <tr><td>Series</td><td>TF-TURN STANDARD</td></tr>
+        <tr><td>Pack Qty</td><td>10 pcs / box</td></tr>
+        <tr><td>ISO Designation</td><td>CCMT 09T3 04 / 08</td></tr>
+        <tr><td>Compatible Holders</td><td>SCLCR / SCLCL (10–25 mm shank)</td></tr>
+        <tr><td>Pocket Size</td><td>09 (for IC 9.525 mm inserts)</td></tr>
+      </table>
+      <div class="screw-box">
+        <div class="screw-icon">🔩</div>
+        <div>
+          <div class="screw-label">Clamping Screw — Torx T15 · M3.5 × 11 mm</div>
+          <div class="screw-desc">
+            Standard clamping screw for CCMT09 series positive holders (SCLCR/SCLCL). Thread size: M3.5. Drive: Torx T15 (star bit). Tightening torque: 2.5–3.5 Nm. Always use the correct Torx T15 key — a damaged screw head leads to insert misalignment and potential insert ejection under load. Replace screw if thread is worn or insert shows movement during cutting.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ══════════ QR SECTION ══════════ -->
+<div class="qr-section">
+  <div class="qr-block">
+    <div class="qr-wrap"><div id="qrMain"></div></div>
+    <div class="qr-block-label">Scan for Full Datasheet</div>
+  </div>
+  <div class="qr-info">
+    <div class="qr-info-title">Digital Datasheet QR</div>
+    <div class="qr-info-body">
+      Scan this QR code with any smartphone to access the full CCMT09T304/08 digital datasheet online.<br><br>
+      <strong>URL:</strong> https://toolflux.co.in/inserts/ccmt09t304<br>
+      <strong>Contains:</strong> Full cutting data, grade info, application guide, compatible holders<br>
+      <strong>Print this QR on insert boxes</strong> — customers can access technical data instantly.
+    </div>
+  </div>
+  <div class="qr-block">
+    <div class="qr-wrap"><div id="qrBox"></div></div>
+    <div class="qr-block-label">Box Label Size (25×25mm)</div>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-logo">TOOLFLUX</div>
+  <div class="footer-note">
+    TF-CCMT09T304/08-P15 · REV 01.1 · MAY 2026<br>
+    All cutting data is indicative. Verify and optimise parameters on your machine before production use.
+  </div>
+  <div class="footer-url">toolflux.co.in</div>
+</footer>
+
+<!-- QR CODE LIBRARY + GENERATOR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  const DS_URL = 'https://toolflux.co.in/inserts/ccmt09t304';
+
+  function makeQR(divId, size) {
+    const el = document.getElementById(divId);
+    if (!el) return;
+    new QRCode(el, {
+      text: DS_URL,
+      width: size,
+      height: size,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    makeQR('qrHero', 72);
+    makeQR('qrMain', 140);
+    makeQR('qrBox',  96);
+  });
+</script>
+</body>
+</html>
