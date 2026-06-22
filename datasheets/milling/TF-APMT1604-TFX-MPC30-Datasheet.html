@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>TOOLFLUX | TF-APMT1604-TFX-MPC30 Datasheet</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Mono:wght@400;500&amp;family=Barlow:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   .hero::before{content:'APMT';font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,18vw,180px);color:rgba(232,184,75,0.04);position:absolute;right:-8px;top:-20px;letter-spacing:-2px;pointer-events:none;user-select:none}
   
@@ -218,194 +219,211 @@
     color: var(--muted);
     line-height: 1.75;
   }
+
+/* ── MOBILE RESPONSIVE PATCH ── */
+.cw,.cutting-table-wrap,.cut-wrap,.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cw::-webkit-scrollbar,.table-wrap::-webkit-scrollbar{height:3px}
+.cw::-webkit-scrollbar-thumb,.table-wrap::-webkit-scrollbar-thumb{background:#e8b84b;border-radius:2px}
+.tt,.cutting-table{min-width:400px}
+@media(max-width:600px){
+  .hero{display:block!important;padding:18px 14px!important}
+  .hero-grid,.hero-cols,.hero-content{display:block!important}
+  .hero-qr,.hero-qr-wrap,.hero-insert,.insert-visual,.hero-insert-col,.hero-svg-col{display:none!important}
+  main,.card-grid{padding:10px!important;gap:10px!important;grid-template-columns:1fr!important}
+  .span2,.s2,.full-width,.col-full{grid-column:1/-1!important}
+  .progress-section,.pw,.perf-bars,.performance-bars{display:none!important}
+  .quick-strip,.qs-strip{grid-template-columns:repeat(2,1fr)!important}
+  .doc-meta{display:none!important}
+  .hrc-gauge-wrap,.hrc-gauge,.hrc-section,.gauge-section{display:none!important}
+  .tin-diagram,.cross-section{display:none!important}
+}
 </style>
 </head>
 <body>
 <header>
-  <div><div class="logo">TOOLFLUX</div><div class="logo-sub">Precision Cutting Solutions · Industrial Grade</div></div>
-  <div class="doc-meta">
-    <div>DOC TYPE &nbsp;·&nbsp; <span>INSERT DATASHEET</span></div>
-    <div>SERIES &nbsp;·&nbsp; <span>TF-MILL STANDARD</span></div>
-    <div>REV &nbsp;·&nbsp; <span>01.0</span></div>
-    <div>DATE &nbsp;·&nbsp; <span>JUNE 2026</span></div>
-  </div>
+<div><div class="logo">TOOLFLUX</div><div class="logo-sub">Precision Cutting Solutions · Industrial Grade</div></div>
+<div class="doc-meta">
+<div>DOC TYPE  ·  <span>INSERT DATASHEET</span></div>
+<div>SERIES  ·  <span>TF-MILL STANDARD</span></div>
+<div>REV  ·  <span>01.0</span></div>
+<div>DATE  ·  <span>JUNE 2026</span></div>
+</div>
 </header>
 <div class="hero">
-  <div>
-    <div class="part-number">APMT<span class="hl">16</span><span class="hl2">04</span></div>
-    <div class="part-desc">85° Parallelogram · Positive Rake · 11° Clearance · Face &amp; Shoulder Milling · PVD TiAlN+TiN</div>
-    <div class="badge-row">
-      <span class="badge b-blue">TFX-MPC30 Grade</span>
-      <span class="badge b-green">ISO P · M · K</span>
-      <span class="badge b-grey">BAP300R / BAP400R</span>
-    </div>
-  </div>
-  <div class="insert-visual"><svg viewBox="0 0 140 145" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="rg4" cx="50%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#252830"/>
-      <stop offset="100%" stop-color="#14161b"/>
-    </radialGradient>
-    <filter id="gw4"><feGaussianBlur stdDeviation="2.5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  </defs>
-  <rect x="18" y="15" width="104" height="104" rx="9" ry="9"
-    fill="url(#rg4)" stroke="#e8b84b" stroke-width="1.4" filter="url(#gw4)"/>
-  <line x1="27" y1="15" x2="113" y2="15" stroke="#e8b84b" stroke-width="2.6" stroke-linecap="round"/>
-  <line x1="122" y1="24" x2="122" y2="110" stroke="#e8b84b" stroke-width="2.6" stroke-linecap="round"/>
-  <circle cx="122" cy="15" r="4.5" fill="#e8b84b" opacity="0.9"/>
-  <line x1="18" y1="110" x2="18" y2="24" stroke="#6e7480" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <line x1="27" y1="119" x2="113" y2="119" stroke="#6e7480" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <circle cx="70" cy="67" r="12" fill="none" stroke="#e8b84b" stroke-width="1" opacity="0.5"/>
-  <circle cx="70" cy="67" r="6" fill="rgba(9,10,12,0.8)" stroke="#e8b84b" stroke-width="0.8" opacity="0.4"/>
-  <rect x="18" y="15" width="104" height="104" rx="9" ry="9" fill="rgba(232,184,75,0.04)"/>
-  <text x="70" y="132" text-anchor="middle" fill="#6e7480" font-size="7" font-family="DM Mono, monospace">W1 9.525 mm · L 17.1 mm · 2 EDGES</text>
-  <text x="70" y="142" text-anchor="middle" fill="#6e7480" font-size="6.5" font-family="DM Mono, monospace">APMT 1604 · 85° PARALLELOGRAM</text>
+<div>
+<div class="part-number">APMT<span class="hl">16</span><span class="hl2">04</span></div>
+<div class="part-desc">85° Parallelogram · Positive Rake · 11° Clearance · Face &amp; Shoulder Milling · PVD TiAlN+TiN</div>
+<div class="badge-row">
+<span class="badge b-blue">TFX-MPC30 Grade</span>
+<span class="badge b-green">ISO P · M · K</span>
+<span class="badge b-grey">BAP300R / BAP400R</span>
+</div>
+</div>
+<div class="insert-visual"><svg fill="none" viewbox="0 0 140 145" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="45%" id="rg4" r="60%">
+<stop offset="0%" stop-color="#252830"></stop>
+<stop offset="100%" stop-color="#14161b"></stop>
+</radialgradient>
+<filter id="gw4"><fegaussianblur result="b" stddeviation="2.5"></fegaussianblur>
+<femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+</defs>
+<rect fill="url(#rg4)" filter="url(#gw4)" height="104" rx="9" ry="9" stroke="#e8b84b" stroke-width="1.4" width="104" x="18" y="15"></rect>
+<line stroke="#e8b84b" stroke-linecap="round" stroke-width="2.6" x1="27" x2="113" y1="15" y2="15"></line>
+<line stroke="#e8b84b" stroke-linecap="round" stroke-width="2.6" x1="122" x2="122" y1="24" y2="110"></line>
+<circle cx="122" cy="15" fill="#e8b84b" opacity="0.9" r="4.5"></circle>
+<line stroke="#6e7480" stroke-dasharray="4 3" stroke-width="1.2" x1="18" x2="18" y1="110" y2="24"></line>
+<line stroke="#6e7480" stroke-dasharray="4 3" stroke-width="1.2" x1="27" x2="113" y1="119" y2="119"></line>
+<circle cx="70" cy="67" fill="none" opacity="0.5" r="12" stroke="#e8b84b" stroke-width="1"></circle>
+<circle cx="70" cy="67" fill="rgba(9,10,12,0.8)" opacity="0.4" r="6" stroke="#e8b84b" stroke-width="0.8"></circle>
+<rect fill="rgba(232,184,75,0.04)" height="104" rx="9" ry="9" width="104" x="18" y="15"></rect>
+<text fill="#6e7480" font-family="DM Mono, monospace" font-size="7" text-anchor="middle" x="70" y="132">W1 9.525 mm · L 17.1 mm · 2 EDGES</text>
+<text fill="#6e7480" font-family="DM Mono, monospace" font-size="6.5" text-anchor="middle" x="70" y="142">APMT 1604 · 85° PARALLELOGRAM</text>
 </svg></div>
-  <div class="hero-qr"><div class="qr-wrap"><div id="qrHero"></div></div><div class="hero-qr-label">Scan · Full Datasheet</div></div>
+<div class="hero-qr"><div class="qr-wrap"><div id="qrHero"></div></div><div class="hero-qr-label">Scan · Full Datasheet</div></div>
 </div>
 <main>
-  <div class="card">
-    <div class="card-head"><div class="card-dot"></div><div class="card-title">Insert Geometry</div></div>
-    <div class="card-body">
-      <table class="spec-tbl">
-        <tr><td>Insert Type</td><td>APMT — 85° Parallelogram, Positive, Single-Sided</td></tr>
-        <tr><td>Cutting Edges</td><td>2 (single face)</td></tr>
-        <tr><td>Insert Body Length (L)</td><td>17.1 mm</td></tr>
-        <tr><td>Cutting Edge Length (LE)</td><td>14.0 mm</td></tr>
-        <tr><td>Insert Width (W1)</td><td>9.525 mm (3/8")</td></tr>
-        <tr><td>Insert Thickness (S)</td><td>4.75 mm</td></tr>
-        <tr><td>Corner Radius (RE)</td><td>0.8 mm</td></tr>
-        <tr><td>Clearance Angle (AN)</td><td>11°</td></tr>
-        <tr><td>Hole Diameter (D1)</td><td>4.5 mm</td></tr>
-        <tr><td>Max Axial DOC (ap)</td><td>≤ 3.0 mm</td></tr>
-        <tr><td>ISO Designation</td><td>APMT 1604PDER</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-head"><div class="card-dot"></div><div class="card-title">Grade TFX-MPC30 — Coating Architecture</div></div>
-    <div class="card-body">
-      <div class="coat-row"><div class="coat-icon">⬡</div><div>
-        <div class="coat-label">PVD TiAlN + TiN</div>
-        <div class="coat-desc">Physical Vapour Deposition TiAlN base layer with TiN outer layer. The TiAlN base handles thermal load and abrasion. The TiN outer layer adds surface hardness and provides a visible wear indicator — the gold colour fades when the edge approaches wear limit.</div>
-      </div></div>
-      <div class="coat-row"><div class="coat-icon">◈</div><div>
-        <div class="coat-label">Fine-Grain WC-Co Substrate</div>
-        <div class="coat-desc">Fine-grain WC-Co, hardness ≈ 1580 HV. ISO P10–P30 / M10–M25. Steel and stainless focused. Slightly higher Co content vs TFX-MP25 for better resistance to micro-chipping in variable-engagement cuts.</div>
-      </div></div>
-      <div class="coat-row"><div class="coat-icon">◉</div><div>
-        <div class="coat-label">TiN Wear Indicator</div>
-        <div class="coat-desc">Gold TiN outer layer disappears at the contact zone as the edge wears — operator can judge edge condition visually without a microscope. Useful in high-production environments for scheduling tool changes.</div>
-      </div></div>
-      <div class="perf-wrap">
-        <div class="perf-row"><div class="perf-labels"><span>Wear Resistance</span><span>High</span></div><div class="perf-bg"><div class="perf-fill fill-gold" style="width:80%"></div></div></div>
-        <div class="perf-row"><div class="perf-labels"><span>Toughness</span><span>Medium-High</span></div><div class="perf-bg"><div class="perf-fill fill-green" style="width:82%"></div></div></div>
-        <div class="perf-row"><div class="perf-labels"><span>Heat Resistance</span><span>Medium-High</span></div><div class="perf-bg"><div class="perf-fill fill-blue" style="width:76%"></div></div></div>
-        <div class="perf-row"><div class="perf-labels"><span>Edge Retention</span><span>High</span></div><div class="perf-bg"><div class="perf-fill fill-teal" style="width:83%"></div></div></div>
+<div class="card">
+<div class="card-head"><div class="card-dot"></div><div class="card-title">Insert Geometry</div></div>
+<div class="card-body">
+<table class="spec-tbl">
+<tr><td>Insert Type</td><td>APMT — 85° Parallelogram, Positive, Single-Sided</td></tr>
+<tr><td>Cutting Edges</td><td>2 (single face)</td></tr>
+<tr><td>Insert Body Length (L)</td><td>17.1 mm</td></tr>
+<tr><td>Cutting Edge Length (LE)</td><td>14.0 mm</td></tr>
+<tr><td>Insert Width (W1)</td><td>9.525 mm (3/8")</td></tr>
+<tr><td>Insert Thickness (S)</td><td>4.75 mm</td></tr>
+<tr><td>Corner Radius (RE)</td><td>0.8 mm</td></tr>
+<tr><td>Clearance Angle (AN)</td><td>11°</td></tr>
+<tr><td>Hole Diameter (D1)</td><td>4.5 mm</td></tr>
+<tr><td>Max Axial DOC (ap)</td><td>≤ 3.0 mm</td></tr>
+<tr><td>ISO Designation</td><td>APMT 1604PDER</td></tr>
+</table>
+</div>
+</div>
+<div class="card">
+<div class="card-head"><div class="card-dot"></div><div class="card-title">Grade TFX-MPC30 — Coating Architecture</div></div>
+<div class="card-body">
+<div class="coat-row"><div class="coat-icon">⬡</div><div>
+<div class="coat-label">PVD TiAlN + TiN</div>
+<div class="coat-desc">Physical Vapour Deposition TiAlN base layer with TiN outer layer. The TiAlN base handles thermal load and abrasion. The TiN outer layer adds surface hardness and provides a visible wear indicator — the gold colour fades when the edge approaches wear limit.</div>
+</div></div>
+<div class="coat-row"><div class="coat-icon">◈</div><div>
+<div class="coat-label">Fine-Grain WC-Co Substrate</div>
+<div class="coat-desc">Fine-grain WC-Co, hardness ≈ 1580 HV. ISO P10–P30 / M10–M25. Steel and stainless focused. Slightly higher Co content vs TFX-MP25 for better resistance to micro-chipping in variable-engagement cuts.</div>
+</div></div>
+<div class="coat-row"><div class="coat-icon">◉</div><div>
+<div class="coat-label">TiN Wear Indicator</div>
+<div class="coat-desc">Gold TiN outer layer disappears at the contact zone as the edge wears — operator can judge edge condition visually without a microscope. Useful in high-production environments for scheduling tool changes.</div>
+</div></div>
+<div class="perf-wrap">
+<div class="perf-row"><div class="perf-labels"><span>Wear Resistance</span><span>High</span></div><div class="perf-bg"><div class="perf-fill fill-gold" style="width:80%"></div></div></div>
+<div class="perf-row"><div class="perf-labels"><span>Toughness</span><span>Medium-High</span></div><div class="perf-bg"><div class="perf-fill fill-green" style="width:82%"></div></div></div>
+<div class="perf-row"><div class="perf-labels"><span>Heat Resistance</span><span>Medium-High</span></div><div class="perf-bg"><div class="perf-fill fill-blue" style="width:76%"></div></div></div>
+<div class="perf-row"><div class="perf-labels"><span>Edge Retention</span><span>High</span></div><div class="perf-bg"><div class="perf-fill fill-teal" style="width:83%"></div></div></div>
+</div>
+</div>
+</div>
+<div class="card span2">
+<div class="card-head"><div class="card-dot"></div><div class="card-title">ISO Material Applicability</div></div>
+<div class="card-body">
+<div class="iso-grid">
+<div class="iso-chip iso-P iso-active" title="Steel — P15–P40">
+<div class="iso-letter">P</div><div class="iso-label">Steel</div><div class="iso-range">P15–P40</div>
+</div>
+<div class="iso-chip iso-M iso-inactive" title="Stainless — Not Recommended">
+<div class="iso-letter">M</div><div class="iso-label">Stainless</div><div class="iso-range">—</div>
+</div>
+<div class="iso-chip iso-K iso-inactive" title="Cast Iron — Not Recommended">
+<div class="iso-letter">K</div><div class="iso-label">Cast Iron</div><div class="iso-range">—</div>
+</div>
+<div class="iso-chip iso-N iso-inactive" title="Non-Ferrous — Not Recommended">
+<div class="iso-letter">N</div><div class="iso-label">Non-Ferrous</div><div class="iso-range">—</div>
+</div>
+<div class="iso-chip iso-S iso-inactive" title="Super Alloy — Not Recommended">
+<div class="iso-letter">S</div><div class="iso-label">Super Alloy</div><div class="iso-range">—</div>
+</div>
+<div class="iso-chip iso-H iso-inactive" title="Hardened — Not Recommended">
+<div class="iso-letter">H</div><div class="iso-label">Hardened</div><div class="iso-range">—</div>
+</div>
+</div>
+<div class="iso-note">
+        PRIMARY · P — Alloy Steel, Tool Steel, aggressive steel milling at higher DOC and feed rates (P15–P40)<br/>NOT RECOMMENDED · M, K, N, S, H — TFX-MUV20 covers M/K range; this grade is optimised for demanding P-type milling only
       </div>
-    </div>
-  </div>
-  <div class="card span2">
-    <div class="card-head"><div class="card-dot"></div><div class="card-title">ISO Material Applicability</div></div>
-    <div class="card-body">
-            <div class="iso-grid">
-        <div class="iso-chip iso-P iso-active" title="Steel — P15–P40">
-          <div class="iso-letter">P</div><div class="iso-label">Steel</div><div class="iso-range">P15–P40</div>
-        </div>
-        <div class="iso-chip iso-M iso-inactive" title="Stainless — Not Recommended">
-          <div class="iso-letter">M</div><div class="iso-label">Stainless</div><div class="iso-range">—</div>
-        </div>
-        <div class="iso-chip iso-K iso-inactive" title="Cast Iron — Not Recommended">
-          <div class="iso-letter">K</div><div class="iso-label">Cast Iron</div><div class="iso-range">—</div>
-        </div>
-        <div class="iso-chip iso-N iso-inactive" title="Non-Ferrous — Not Recommended">
-          <div class="iso-letter">N</div><div class="iso-label">Non-Ferrous</div><div class="iso-range">—</div>
-        </div>
-        <div class="iso-chip iso-S iso-inactive" title="Super Alloy — Not Recommended">
-          <div class="iso-letter">S</div><div class="iso-label">Super Alloy</div><div class="iso-range">—</div>
-        </div>
-        <div class="iso-chip iso-H iso-inactive" title="Hardened — Not Recommended">
-          <div class="iso-letter">H</div><div class="iso-label">Hardened</div><div class="iso-range">—</div>
-        </div>
-      </div>
-      <div class="iso-note">
-        PRIMARY · P — Alloy Steel, Tool Steel, aggressive steel milling at higher DOC and feed rates (P15–P40)<br>NOT RECOMMENDED · M, K, N, S, H — TFX-MUV20 covers M/K range; this grade is optimised for demanding P-type milling only
-      </div>
-    </div>
-  </div>
-  <div class="card span2">
-    <div class="card-head"><div class="card-dot"></div><div class="card-title">Cutting Data — Milling Parameters (TFX-MPC30 · ISO Standard Conditions)</div></div>
-    <div class="card-body">
-      <div class="cut-wrap">
-        <table class="cut-tbl">
-          <thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fz (mm/tooth)</th><th>ap — Axial (mm)</th><th>ae — Radial (mm)</th><th>Coolant</th></tr></thead>
-          <tbody><tr><td class="mat"><span class="rec-dot"></span>Carbon / Structural Steel (P1)</td><td class="mono">≤ 200 HB</td><td class="range">170–260</td><td class="mono">0.08–0.16</td><td class="mono">0.5–3.0</td><td class="mono">≤ 14</td><td class="mono">Optional</td></tr>
-            <tr><td class="mat"><span class="rec-dot"></span>Alloy Steel 42CrMo4 (P2)</td><td class="mono">200–320 HB</td><td class="range">150–230</td><td class="mono">0.06–0.12</td><td class="mono">0.5–2.5</td><td class="mono">≤ 12</td><td class="mono">Recommended</td></tr>
-            <tr><td class="mat">Alloy Tool Steel (P3)</td><td class="mono">280–350 HB</td><td class="range">130–210</td><td class="mono">0.05–0.10</td><td class="mono">0.3–2.0</td><td class="mono">≤ 10</td><td class="mono">Required</td></tr>
-            <tr><td class="mat">Stainless 304 / 316L (M1)</td><td class="mono">≤ 270 HB</td><td class="range">110–190</td><td class="mono">0.05–0.12</td><td class="mono">0.3–2.0</td><td class="mono">≤ 12</td><td class="mono">Required</td></tr>
-            <tr><td class="mat">Grey Cast Iron GG25 (K1)</td><td class="mono">180–250 HB</td><td class="range">120–210</td><td class="mono">0.08–0.14</td><td class="mono">0.5–2.5</td><td class="mono">≤ 14</td><td class="mono">Dry/Optional</td></tr></tbody>
-        </table>
-      </div>
-      <div class="cut-note">● Vc = cutting speed · fz = feed per tooth · ap = axial DOC · ae = radial DOC<br>
-      ⚠ APMT1604 larger LE (14mm) vs APMT1135 — use larger holders (Ø32mm+) to maintain rigidity at these fz values.<br>
+</div>
+</div>
+<div class="card span2">
+<div class="card-head"><div class="card-dot"></div><div class="card-title">Cutting Data — Milling Parameters (TFX-MPC30 · ISO Standard Conditions)</div></div>
+<div class="card-body">
+<div class="cut-wrap">
+<table class="cut-tbl">
+<thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fz (mm/tooth)</th><th>ap — Axial (mm)</th><th>ae — Radial (mm)</th><th>Coolant</th></tr></thead>
+<tbody><tr><td class="mat"><span class="rec-dot"></span>Carbon / Structural Steel (P1)</td><td class="mono">≤ 200 HB</td><td class="range">170–260</td><td class="mono">0.08–0.16</td><td class="mono">0.5–3.0</td><td class="mono">≤ 14</td><td class="mono">Optional</td></tr>
+<tr><td class="mat"><span class="rec-dot"></span>Alloy Steel 42CrMo4 (P2)</td><td class="mono">200–320 HB</td><td class="range">150–230</td><td class="mono">0.06–0.12</td><td class="mono">0.5–2.5</td><td class="mono">≤ 12</td><td class="mono">Recommended</td></tr>
+<tr><td class="mat">Alloy Tool Steel (P3)</td><td class="mono">280–350 HB</td><td class="range">130–210</td><td class="mono">0.05–0.10</td><td class="mono">0.3–2.0</td><td class="mono">≤ 10</td><td class="mono">Required</td></tr>
+<tr><td class="mat">Stainless 304 / 316L (M1)</td><td class="mono">≤ 270 HB</td><td class="range">110–190</td><td class="mono">0.05–0.12</td><td class="mono">0.3–2.0</td><td class="mono">≤ 12</td><td class="mono">Required</td></tr>
+<tr><td class="mat">Grey Cast Iron GG25 (K1)</td><td class="mono">180–250 HB</td><td class="range">120–210</td><td class="mono">0.08–0.14</td><td class="mono">0.5–2.5</td><td class="mono">≤ 14</td><td class="mono">Dry/Optional</td></tr></tbody>
+</table>
+</div>
+<div class="cut-note">● Vc = cutting speed · fz = feed per tooth · ap = axial DOC · ae = radial DOC<br/>
+      ⚠ APMT1604 larger LE (14mm) vs APMT1135 — use larger holders (Ø32mm+) to maintain rigidity at these fz values.<br/>
       ⚠ Start at lower Vc and fz; increase once chip form is stable on your machine.</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-head"><div class="card-dot"></div><div class="card-title">TOOLFLUX Part Number &amp; Compatible Holders</div></div>
-    <div class="card-body">
-      <table class="spec-tbl">
-        <tr><td>TOOLFLUX Part No.</td><td><span class="pn-highlight">TF-APMT1604-TFX-MPC30</span></td></tr>
-        <tr><td>Grade</td><td>TFX-MPC30</td></tr>
-        <tr><td>Series</td><td>TF-MILL STANDARD</td></tr>
-        <tr><td>Pack Qty</td><td>10 pcs / box</td></tr>
-        <tr><td>ISO Designation</td><td>APMT 1604PDER</td></tr>
-      </table>
-      <div style="margin-top:14px;font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Compatible Holders</div>
-      <table class="spec-tbl">
-        <tr><td>BAP300R-32-32-150-4F</td><td>Ø32mm Face &amp; Shoulder · 4T</td></tr>
-        <tr><td>BAP300R-40-40-150-5F</td><td>Ø40mm Face &amp; Shoulder · 5T</td></tr>
-        <tr><td>BAP300R-50-22-5F</td><td>Ø50mm Face Mill · 5T</td></tr>
-        <tr><td>BAP400R-32-32-150-4F</td><td>Ø32mm Heavy-Duty · 4T</td></tr>
-      </table>
-      <div class="screw-box">
-        <div class="screw-icon">🔩</div>
-        <div>
-          <div class="screw-label">Clamping Screw — Torx T20 · M4 × 9 mm</div>
-          <div class="screw-desc">Standard clamping screw for APMT1604 BAP300R/400R holders. Thread: M4. Length: 9mm. Drive: Torx T20. Tightening torque: 2.5–3.5 Nm. Use calibrated torque wrench — correct seating is critical at the higher chip loads APMT1604 handles in larger diameter cutters.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-head"><div class="card-dot"></div><div class="card-title">Application Guide</div></div>
-    <div class="card-body">
-      <ul class="app-list">
-        <li><span class="app-icon">⬛</span><div><strong>Face Milling — Large Surfaces</strong>APMT1604 covers more surface per pass than APMT1135 (LE 14mm vs 9mm). Run in Ø32mm+ cutters at ae up to 75% cutter diameter. Vc 160–230 m/min on structural steel.</div></li>
-        <li><span class="app-icon">📐</span><div><strong>Step Shoulder — 90° Walls</strong>Keep ap ≤ 3.0mm and ae ≤ 7mm for clean walls. Larger insert gives stronger edge than APMT1135 under lateral milling forces.</div></li>
-        <li><span class="app-icon">🔄</span><div><strong>BAP300R vs BAP400R</strong>BAP300R = standard face/shoulder mill. BAP400R = heavy-duty — use for large DOC, forged surfaces, or when BAP300R vibrates. APMT1604 fits both series.</div></li>
-      </ul>
-      <div class="tip-box"><strong>APMT1135 vs APMT1604:</strong> Use APMT1135 in Ø25mm holders for small parts and tight clearances. Use APMT1604 in Ø32mm+ holders where you need higher metal removal rate or are milling wide surfaces in one pass.</div>
-    </div>
-  </div>
+</div>
+</div>
+<div class="card">
+<div class="card-head"><div class="card-dot"></div><div class="card-title">TOOLFLUX Part Number &amp; Compatible Holders</div></div>
+<div class="card-body">
+<table class="spec-tbl">
+<tr><td>TOOLFLUX Part No.</td><td><span class="pn-highlight">TF-APMT1604-TFX-MPC30</span></td></tr>
+<tr><td>Grade</td><td>TFX-MPC30</td></tr>
+<tr><td>Series</td><td>TF-MILL STANDARD</td></tr>
+<tr><td>Pack Qty</td><td>10 pcs / box</td></tr>
+<tr><td>ISO Designation</td><td>APMT 1604PDER</td></tr>
+</table>
+<div style="margin-top:14px;font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Compatible Holders</div>
+<table class="spec-tbl">
+<tr><td>BAP300R-32-32-150-4F</td><td>Ø32mm Face &amp; Shoulder · 4T</td></tr>
+<tr><td>BAP300R-40-40-150-5F</td><td>Ø40mm Face &amp; Shoulder · 5T</td></tr>
+<tr><td>BAP300R-50-22-5F</td><td>Ø50mm Face Mill · 5T</td></tr>
+<tr><td>BAP400R-32-32-150-4F</td><td>Ø32mm Heavy-Duty · 4T</td></tr>
+</table>
+<div class="screw-box">
+<div class="screw-icon">🔩</div>
+<div>
+<div class="screw-label">Clamping Screw — Torx T20 · M4 × 9 mm</div>
+<div class="screw-desc">Standard clamping screw for APMT1604 BAP300R/400R holders. Thread: M4. Length: 9mm. Drive: Torx T20. Tightening torque: 2.5–3.5 Nm. Use calibrated torque wrench — correct seating is critical at the higher chip loads APMT1604 handles in larger diameter cutters.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-head"><div class="card-dot"></div><div class="card-title">Application Guide</div></div>
+<div class="card-body">
+<ul class="app-list">
+<li><span class="app-icon">⬛</span><div><strong>Face Milling — Large Surfaces</strong>APMT1604 covers more surface per pass than APMT1135 (LE 14mm vs 9mm). Run in Ø32mm+ cutters at ae up to 75% cutter diameter. Vc 160–230 m/min on structural steel.</div></li>
+<li><span class="app-icon">📐</span><div><strong>Step Shoulder — 90° Walls</strong>Keep ap ≤ 3.0mm and ae ≤ 7mm for clean walls. Larger insert gives stronger edge than APMT1135 under lateral milling forces.</div></li>
+<li><span class="app-icon">🔄</span><div><strong>BAP300R vs BAP400R</strong>BAP300R = standard face/shoulder mill. BAP400R = heavy-duty — use for large DOC, forged surfaces, or when BAP300R vibrates. APMT1604 fits both series.</div></li>
+</ul>
+<div class="tip-box"><strong>APMT1135 vs APMT1604:</strong> Use APMT1135 in Ø25mm holders for small parts and tight clearances. Use APMT1604 in Ø32mm+ holders where you need higher metal removal rate or are milling wide surfaces in one pass.</div>
+</div>
+</div>
 </main>
 <div class="qr-section">
-  <div class="qr-block"><div class="qr-wrap"><div id="qrMain"></div></div><div class="qr-block-label">Scan for Full Datasheet</div></div>
-  <div class="qr-info">
-    <div class="qr-info-title">Digital Datasheet QR</div>
-    <div class="qr-info-body">
-      Scan this QR code to access the full APMT1604 TFX-MPC30 digital datasheet.<br><br>
-      <strong>URL:</strong> https://toolflux-dev.github.io/toolflux-datasheets/datasheets/milling/TF-APMT1604-TFX-MPC30-Datasheet.html<br>
-      <strong>Contains:</strong> Full cutting data, grade architecture, compatible holders, application guide
+<div class="qr-block"><div class="qr-wrap"><div id="qrMain"></div></div><div class="qr-block-label">Scan for Full Datasheet</div></div>
+<div class="qr-info">
+<div class="qr-info-title">Digital Datasheet QR</div>
+<div class="qr-info-body">
+      Scan this QR code to access the full APMT1604 TFX-MPC30 digital datasheet.<br/><br/>
+<strong>URL:</strong> https://toolflux-dev.github.io/toolflux-datasheets/datasheets/milling/TF-APMT1604-TFX-MPC30-Datasheet.html<br/>
+<strong>Contains:</strong> Full cutting data, grade architecture, compatible holders, application guide
     </div>
-  </div>
-  <div class="qr-block"><div class="qr-wrap"><div id="qrBox"></div></div><div class="qr-block-label">Box Label (25×25mm)</div></div>
+</div>
+<div class="qr-block"><div class="qr-wrap"><div id="qrBox"></div></div><div class="qr-block-label">Box Label (25×25mm)</div></div>
 </div>
 <footer>
-  <div class="footer-logo">TOOLFLUX</div>
-  <div class="footer-note">TF-APMT1604-TFX-MPC30 · REV 01.0 · JUNE 2026<br>All cutting data is indicative. Verify and optimise parameters on your machine before production use.</div>
-  <div class="footer-url">toolflux.co.in</div>
+<div class="footer-logo">TOOLFLUX</div>
+<div class="footer-note">TF-APMT1604-TFX-MPC30 · REV 01.0 · JUNE 2026<br/>All cutting data is indicative. Verify and optimise parameters on your machine before production use.</div>
+<div class="footer-url">toolflux.co.in</div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
