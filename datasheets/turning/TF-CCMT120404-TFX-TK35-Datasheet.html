@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>TOOLFLUX | TF-CCMT120404-TFX-TKC25</title><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>.hero::before{content:'CCMT';font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,18vw,180px);color:rgba(232,184,75,0.04);position:absolute;right:-8px;top:-20px;letter-spacing:-2px;pointer-events:none;user-select:none}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#090a0c;color:#dde0e8;font-family:'Barlow',sans-serif;font-size:13px;line-height:1.65;min-height:100vh;-webkit-font-smoothing:antialiased}
+header{background:#111316;border-bottom:2px solid #e8b84b;padding:clamp(14px,3vw,24px) clamp(16px,5vw,44px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:100}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:6px;color:#e8b84b;line-height:1}
+.logo-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;color:#6e7480;text-transform:uppercase;margin-top:3px}
+.doc-meta{font-family:'DM Mono',monospace;font-size:9px;color:#6e7480;line-height:2;text-align:right}
+.doc-meta span{color:#e8b84b}
+.hero{background:linear-gradient(135deg,#14161b 0%,#1b1e25 55%,#111316 100%);border-bottom:1px solid #252830;padding:clamp(24px,5vw,44px) clamp(16px,5vw,44px);display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:24px;position:relative;overflow:hidden}
+.part-number{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,8vw,56px);letter-spacing:2px;color:#dde0e8;line-height:1}
+.hl{color:#e8b84b}
+.part-desc{font-size:clamp(11px,2vw,13px);color:#6e7480;margin-top:8px;font-weight:300;letter-spacing:0.4px}
+.badge-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.2px;padding:4px 10px;border-radius:2px;text-transform:uppercase;font-weight:500;white-space:nowrap}
+.b-g{background:rgba(232,184,75,0.13);color:#e8b84b;border:1px solid rgba(232,184,75,0.28)}
+.b-gr{background:rgba(62,207,114,0.1);color:#3ecf72;border:1px solid rgba(62,207,114,0.28)}
+.b-gy{background:rgba(255,255,255,0.04);color:#6e7480;border:1px solid #252830}
+.insert-visual{width:clamp(90px,14vw,140px);flex-shrink:0}
+.insert-visual svg{width:100%;height:auto}
+.hero-qr{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.qr-wrap{border:2px solid rgba(232,184,75,0.35);border-radius:4px;background:#fff;padding:4px;line-height:0}
+.qr-lbl{font-family:'DM Mono',monospace;font-size:8px;color:#6e7480;letter-spacing:1px;text-align:center;text-transform:uppercase}
+main{padding:clamp(16px,4vw,32px) clamp(16px,5vw,44px) 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.s2{grid-column:1/-1}
+.card{background:#15171b;border:1px solid #252830;border-radius:4px;overflow:hidden;animation:fu .45s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.10s}.card:nth-child(3){animation-delay:.13s}.card:nth-child(4){animation-delay:.16s}.card:nth-child(5){animation-delay:.19s}.card:nth-child(6){animation-delay:.22s}
+.ch{background:rgba(232,184,75,0.06);border-bottom:1px solid #252830;padding:10px 16px;display:flex;align-items:center;gap:9px}
+.cd{width:6px;height:6px;border-radius:50%;background:#e8b84b;flex-shrink:0}
+.ct{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:#e8b84b;text-transform:uppercase}
+.cb{padding:16px}
+.st{width:100%;border-collapse:collapse}
+.st tr{border-bottom:1px solid #252830}
+.st tr:last-child{border-bottom:none}
+.st td{padding:9px 4px;vertical-align:middle}
+.st td:first-child{color:#6e7480;font-size:12px;width:46%}
+.st td:last-child{font-family:'DM Mono',monospace;font-size:12px;color:#dde0e8;font-weight:500}
+.ig{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(5px,1.5vw,10px)}
+.ic2{border-radius:3px;padding:clamp(8px,2vw,12px) 4px;text-align:center;font-family:'DM Mono',monospace;border:1px solid;display:flex;flex-direction:column;align-items:center;gap:3px}
+.il{font-size:clamp(14px,3.5vw,20px);font-family:'Bebas Neue',sans-serif;letter-spacing:1px}
+.ila{font-size:clamp(7px,1.5vw,9px);letter-spacing:0.3px;opacity:0.75;text-transform:uppercase}
+.iP{background:rgba(30,100,220,0.12);border-color:rgba(30,100,220,0.4);color:#6aa0ff}
+.iM{background:rgba(255,200,0,0.10);border-color:rgba(255,200,0,0.35);color:#ffd84a}
+.iK{background:rgba(220,50,50,0.10);border-color:rgba(220,50,50,0.35);color:#ff7a6a}
+.iN{background:rgba(0,200,150,0.08);border-color:rgba(0,200,150,0.2);color:#4ec994}
+.iS{background:rgba(200,100,0,0.08);border-color:rgba(200,100,0,0.2);color:#c88a2a}
+.iH{background:rgba(140,0,220,0.08);border-color:rgba(140,0,220,0.2);color:#9480c8}
+.ia:hover{transform:scale(1.05)}
+.iin{opacity:0.28;filter:grayscale(0.7)}
+.in{margin-top:12px;font-size:10px;color:#6e7480;font-family:'DM Mono',monospace;letter-spacing:0.3px;line-height:1.7}
+.cw{overflow-x:auto}
+.tt{width:100%;min-width:520px;border-collapse:collapse}
+.tt th{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:#6e7480;text-transform:uppercase;padding:9px 10px;border-bottom:1px solid #252830;text-align:left;background:rgba(255,255,255,0.02);white-space:nowrap}
+.tt td{padding:10px;font-size:12px;border-bottom:1px solid rgba(37,40,48,0.7);vertical-align:middle;white-space:nowrap}
+.tt tr:last-child td{border-bottom:none}
+.tt td.m{color:#6e7480;white-space:normal}
+.rd{display:inline-block;width:5px;height:5px;border-radius:50%;background:#3ecf72;margin-right:6px;vertical-align:middle}
+.mo{font-family:'DM Mono',monospace;color:#dde0e8}
+.ra{font-family:'DM Mono',monospace;color:#e8b84b}
+.cn{margin-top:10px;font-size:10px;color:#6e7480;font-family:'DM Mono',monospace;line-height:1.8}
+.cr{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid #252830}
+.cr:last-of-type{border-bottom:none}
+.ci{width:34px;height:34px;border-radius:50%;background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.22);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;margin-top:2px}
+.cl{font-size:12px;font-weight:700;color:#dde0e8}
+.cds{font-size:11px;color:#6e7480;margin-top:3px;line-height:1.55}
+.pw{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.pr{display:flex;flex-direction:column;gap:3px}
+.pl{display:flex;justify-content:space-between;font-size:10px;color:#6e7480;font-family:'DM Mono',monospace}
+.pb{background:rgba(255,255,255,0.05);border-radius:2px;height:5px;overflow:hidden}
+.pf{height:100%;border-radius:2px;background:linear-gradient(90deg,#e8b84b,#f0c060)}
+.pn{font-family:'DM Mono',monospace;font-size:clamp(11px,2.5vw,13px);color:#e8b84b;background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.22);border-radius:3px;padding:2px 8px;display:inline-block;margin-bottom:2px}
+.sb{background:rgba(91,156,246,0.07);border:1px solid rgba(91,156,246,0.25);border-radius:3px;padding:12px 14px;margin-top:12px;display:flex;gap:10px;align-items:flex-start}
+.si{font-size:20px;margin-top:2px}
+.sl{font-size:12px;font-weight:700;color:#5b9cf6}
+.sd{font-size:11px;color:#6e7480;margin-top:3px;line-height:1.55}
+.wb{background:rgba(201,71,47,0.07);border:1px solid rgba(201,71,47,0.28);border-radius:3px;padding:10px 14px;font-size:11px;color:#6e7480;line-height:1.65;margin-top:10px}
+.wb strong{color:#e06b55}
+.tb{background:rgba(62,207,114,0.06);border:1px solid rgba(62,207,114,0.22);border-radius:3px;padding:10px 14px;font-size:11px;color:#6e7480;line-height:1.65;margin-top:10px}
+.tb strong{color:#3ecf72}
+.qs{background:#111316;border-top:1px solid #252830;border-bottom:1px solid #252830;padding:clamp(16px,3vw,28px) clamp(16px,5vw,44px);display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.qb{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0}
+.qb .qr-wrap{border:2px solid rgba(232,184,75,0.4);border-radius:5px}
+.qbl{font-family:'DM Mono',monospace;font-size:9px;color:#6e7480;letter-spacing:1.5px;text-transform:uppercase;text-align:center}
+.qi{flex:1;min-width:200px}
+.qt{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:#e8b84b;margin-bottom:6px}
+.qd{font-size:11px;color:#6e7480;line-height:1.7;font-family:'DM Mono',monospace}
+.qd strong{color:#dde0e8}
+footer{border-top:1px solid #252830;background:#111316;padding:clamp(12px,3vw,18px) clamp(16px,5vw,44px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.fl{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;color:#e8b84b}
+.fn{font-family:'DM Mono',monospace;font-size:9px;color:#6e7480;letter-spacing:0.8px;text-align:center;flex:1;min-width:200px}
+.fu{font-family:'DM Mono',monospace;font-size:9px;color:#6e7480;letter-spacing:1px}
+@media(max-width:520px){.hero{grid-template-columns:1fr}.insert-visual{display:none}.hero-qr{display:none}.ig{grid-template-columns:repeat(3,1fr)}.doc-meta{display:none}footer{flex-direction:column;text-align:center}}
+@media(min-width:900px){main{grid-template-columns:repeat(2,1fr)}}
+  /* ── ISO RANGE LABEL (added by batch updater v1.1) ── */
+  .iso-range {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(6px, 1.3vw, 8px);
+    letter-spacing: 0.2px;
+    opacity: 0.88;
+    margin-top: 1px;
+    line-height: 1;
+  }
+  /* ── GRADE DESCRIPTION PANEL ── */
+  .grade-desc-panel {
+    background: rgba(232,184,75,0.05);
+    border: 1px solid rgba(232,184,75,0.2);
+    border-radius: 3px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .grade-desc-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .grade-chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(232,184,75,0.1);
+    border: 1px solid rgba(232,184,75,0.3);
+    border-radius: 3px;
+    padding: 3px 10px;
+    letter-spacing: 1px;
+  }
+  .gdtag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    padding: 2px 7px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .gdtag.pvd { background:rgba(62,207,114,0.1);  color:#3ecf72; border:1px solid rgba(62,207,114,0.25); }
+  .gdtag.cvd { background:rgba(91,156,246,0.1);  color:#5b9cf6; border:1px solid rgba(91,156,246,0.25); }
+  .gdtag.rp  { background:rgba(106,160,255,0.1); color:#6aa0ff; border:1px solid rgba(106,160,255,0.25); }
+  .gdtag.rm  { background:rgba(255,216,74,0.1);  color:#ffd84a; border:1px solid rgba(255,216,74,0.25); }
+  .gdtag.rk  { background:rgba(255,122,106,0.1); color:#ff7a6a; border:1px solid rgba(255,122,106,0.25); }
+  .grade-desc-body {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .ir{font-family:'DM Mono',monospace;font-size:clamp(6px,1.3vw,8px);letter-spacing:.2px;opacity:.88;margin-top:1px;line-height:1}
+  .gdp{background:rgba(232,184,75,.05);border:1px solid rgba(232,184,75,.2);border-radius:3px;padding:12px 14px;margin-bottom:14px}
+  .gdh{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+  .gdc{font-family:'DM Mono',monospace;font-size:12px;font-weight:700;color:var(--accent);background:rgba(232,184,75,.1);border:1px solid rgba(232,184,75,.3);border-radius:3px;padding:3px 10px;letter-spacing:1px}
+  .gdt{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.8px;padding:2px 7px;border-radius:2px;text-transform:uppercase}
+  .gdt.pvd{background:rgba(62,207,114,.1);color:#3ecf72;border:1px solid rgba(62,207,114,.25)}
+  .gdt.cvd{background:rgba(91,156,246,.1);color:#5b9cf6;border:1px solid rgba(91,156,246,.25)}
+  .gdt.rp{background:rgba(106,160,255,.1);color:#6aa0ff;border:1px solid rgba(106,160,255,.25)}
+  .gdt.rm{background:rgba(255,216,74,.1);color:#ffd84a;border:1px solid rgba(255,216,74,.25)}
+  .gdt.rk{background:rgba(255,122,106,.1);color:#ff7a6a;border:1px solid rgba(255,122,106,.25)}
+  .gdb{font-size:11px;color:var(--muted);line-height:1.75}
+</style></head><body>
+<header><div><div class="logo">TOOLFLUX</div><div class="logo-sub">Precision Cutting Solutions · Industrial Grade</div></div>
+<div class="doc-meta"><div>DOC TYPE &nbsp;·&nbsp; <span>INSERT DATASHEET</span></div>
+<div>SERIES &nbsp;·&nbsp; <span>TF-TURN STANDARD</span></div><div>DATE &nbsp;·&nbsp; <span>JUNE 2026</span></div></div></header>
+<div class="hero">
+  <div><div class="part-number"><span class="hl">CCMT</span>120404</div>
+    <div class="part-desc">C — 80° Diamond · Positive · 80° Point · RE 0.4 mm · Large diameter finishing</div>
+    <div class="badge-row"><span class="badge b-g">TFX-TKC25</span><span class="badge b-gr">Roughing / Nodular CI</span><span class="badge b-gy">Vc 150–280 m/min</span><span class="badge b-gy">CVD TiCN + Al₂O₃</span></div></div>
+  <div class="insert-visual"><svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="rg" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#252830"/><stop offset="100%" stop-color="#14161b"/></radialGradient><filter id="gw"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <polygon points="65,12 110,48 110,84 65,118 20,84 20,48" fill="url(#rg)" stroke="#e8b84b" stroke-width="1.4" filter="url(#gw)"/>
+  <line x1="20" y1="48" x2="65" y2="12" stroke="#e8b84b" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="20" cy="48" r="4" fill="#e8b84b" opacity="0.85"/>
+  <circle cx="65" cy="65" r="8" fill="none" stroke="#e8b84b" stroke-width="1" opacity="0.5"/>
+  <polygon points="65,12 110,48 110,84 65,118 20,84 20,48" fill="rgba(232,184,75,0.04)"/>
+  <text x="65" y="128" text-anchor="middle" fill="#6e7480" font-size="7" font-family="DM Mono,monospace">IC 12.7 mm · RE 0.4 mm</text>
+</svg></div>
+  <div class="hero-qr"><div class="qr-wrap"><div id="qrHero"></div></div><div class="qr-lbl">Scan · Datasheet</div></div>
+</div>
+<main><div class="card"><div class="ch"><div class="cd"></div><div class="ct">Insert Geometry</div></div><div class="cb">
+          <table class="st">
+            <tr><td>Shape</td><td>C — 80° Diamond</td></tr>
+            <tr><td>Point Angle</td><td>80°</td></tr>
+            <tr><td>Rake</td><td>Positive (7° clearance)</td></tr>
+            <tr><td>Inscribed Circle</td><td>12.7 mm</td></tr>
+            <tr><td>Thickness (S)</td><td>4.76 mm</td></tr>
+            <tr><td>Edge Length (LE)</td><td>12.9 mm</td></tr>
+            <tr><td>Corner Radius (RE)</td><td>0.4 mm</td></tr>
+            <tr><td>Cutting Edges</td><td>2</td></tr>
+            <tr><td>Hole Diameter (D1)</td><td>5.5 mm</td></tr>
+            <tr><td>ISO Designation</td><td>CCMT120404</td></tr>
+          </table>
+          <div class="tb"><strong>RE 0.4 mm:</strong> Typical surface Ra 0.8–1.6 µm.</div>
+        </div></div><div class="card"><div class="ch"><div class="cd"></div><div class="ct">Grade TFX-TKC25 — Coating Architecture</div></div><div class="cb"><div class="gdp"><div class="gdh"><span class="gdc">TFX-TKC25</span><span class="gdt cvd">CVD</span><span class="gdt rk">K10–K20</span></div><div class="gdb">CVD multilayer on toughened carbide substrate with higher wear resistance than TFX-TKC15. Preferred for production turning of ductile iron at aggressive parameters where extended tool life and minimised tool changes are the priority.</div></div><div class="cr"><div class="ci">⬡</div><div><div class="cl">CVD TiCN + Al₂O₃</div><div class="cds">TiCN hardness + Al₂O₃ thermal shock resistance for interrupted CI passes. Built for the impact from hard spots and chilled zones.</div></div></div><div class="cr"><div class="ci">◈</div><div><div class="cl">Tough WC-Co</div><div class="cds">Hardness ≈ 1520 HV. High Co binder. ISO K25–K40. Impact resistance for nodular and chilled cast iron.</div></div></div><div class="pw"><div class="pr"><div class="pl"><span>Wear Resistance</span><span>High</span></div><div class="pb"><div class="pf" style="width:85%"></div></div></div><div class="pr"><div class="pl"><span>Toughness</span><span>Very High</span></div><div class="pb"><div class="pf" style="width:90%"></div></div></div><div class="pr"><div class="pl"><span>Heat Resistance</span><span>High</span></div><div class="pb"><div class="pf" style="width:83%"></div></div></div><div class="pr"><div class="pl"><span>Edge Sharpness</span><span>Medium</span></div><div class="pb"><div class="pf" style="width:60%"></div></div></div></div></div></div><div class="card s2"><div class="ch"><div class="cd"></div><div class="ct">ISO Material Applicability</div></div><div class="cb"><div class="ig"><div class="ic2 iP iin" title="Steel — Not Recommended"><div class="il">P</div><div class="ila">Steel</div><div class="ir">—</div></div><div class="ic2 iM iin" title="Stainless — Not Recommended"><div class="il">M</div><div class="ila">Stainless</div><div class="ir">—</div></div><div class="ic2 iK ia" title="Cast Iron — K10–K20"><div class="il">K</div><div class="ila">Cast Iron</div><div class="ir">K10–K20</div></div><div class="ic2 iN iin" title="Non-Ferrous — Not Recommended"><div class="il">N</div><div class="ila">Non-Ferrous</div><div class="ir">—</div></div><div class="ic2 iS iin" title="Super Alloy — Not Recommended"><div class="il">S</div><div class="ila">Super Alloy</div><div class="ir">—</div></div><div class="ic2 iH iin" title="Hardened — Not Recommended"><div class="il">H</div><div class="ila">Hardened</div><div class="ir">—</div></div></div><div class="in">PRIMARY · K — Grey &amp; Ductile Cast Iron — semi-finishing to roughing, extended tool life in production (K10–K20)<br>NOT RECOMMENDED · P, M, N, S, H</div></div></div><div class="card s2"><div class="ch"><div class="cd"></div><div class="ct">Cutting Data — Turning (TFX-TKC25 · ISO Conditions)</div></div><div class="cb">
+          <div class="cw"><table class="tt">
+            <thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fn mm/rev (RE=0.4)</th><th>ap (mm)</th><th>Coolant</th></tr></thead>
+            <tbody><tr><td class="m"><span class="rd"></span>Nodular CI GGG70 (K2)</td><td class="mo">200–280 HB</td><td class="ra">150–250</td><td class="mo">0.15–0.40</td><td class="mo">1.0–5.0</td><td class="mo">Dry / Optional</td></tr><tr><td class="m"><span class="rd"></span>Chilled CI (K3)</td><td class="mo">280–360 HB</td><td class="ra">120–200</td><td class="mo">0.15–0.30</td><td class="mo">0.5–3.0</td><td class="mo">Dry</td></tr><tr><td class="m"><span class="rd"></span>Grey CI — Roughing (K1)</td><td class="mo">180–240 HB</td><td class="ra">180–280</td><td class="mo">0.15–0.40</td><td class="mo">1.0–4.0</td><td class="mo">Dry</td></tr></tbody></table></div>
+          <div class="cn">● Vc=cutting speed · fn=feed/rev · ap=depth of cut<br>
+          ⚠ fn scaled for RE 0.4mm. Max fn ≤ RE/2 for best Ra. Start at lower values until chip form is stable.</div>
+        </div></div><div class="card">
+  <div class="ch"><div class="cd"></div><div class="ct">Part Number &amp; Holders</div></div>
+  <div class="cb">
+    <table class="st">
+      <tr><td>TOOLFLUX Part No.</td><td><span class="pn">TF-CCMT120404-TFX-TKC25</span></td></tr>
+      <tr><td>Grade</td><td>TFX-TKC25</td></tr>
+      <tr><td>Series</td><td>TF-TURN STANDARD</td></tr>
+      <tr><td>Pack Qty</td><td>10 pcs / box</td></tr>
+      <tr><td>ISO Designation</td><td>CCMT120404</td></tr>
+    </table>
+    <div style="margin-top:12px;font-family:'DM Mono',monospace;font-size:9px;color:#6e7480;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Compatible Holders</div>
+    <table class="st"><tr><td>SCLCR/SCLCL 2525M12</td><td>Compatible holder</td></tr><tr><td>SDJCR/SDJCL 2525M12</td><td>Compatible holder</td></tr></table>
+    <div class="sb"><div class="si">🔩</div><div>
+      <div class="sl">Clamping Screw — M5 × 12 mm</div>
+      <div class="sd">M5 × 12 mm · Torx T25 · 3.5–5.0 Nm — Use calibrated torque wrench. Loose insert shifts tip radius and damages surface finish.</div>
+    </div></div>
+  </div></div><div class="card"><div class="ch"><div class="cd"></div><div class="ct">Application Guide</div></div><div class="cb">
+          <table class="st">
+            <tr><td>Operation</td><td>Large diameter finishing</td></tr>
+            <tr><td>Corner Radius</td><td>0.4 mm</td></tr>
+            <tr><td>Surface Ra</td><td>0.8–1.6 µm</td></tr>
+            <tr><td>Grade Position</td><td>Roughing / Nodular CI</td></tr>
+            <tr><td>Vc Range</td><td>Vc 150–280 m/min</td></tr>
+            <tr><td>Coating</td><td>CVD TiCN + Al₂O₃</td></tr>
+            <tr><td>ISO Range</td><td>Tough WC-Co (K20–K35)</td></tr>
+          </table>
+        </div></div></main>
+<div class="qs">
+  <div class="qb"><div class="qr-wrap"><div id="qrMain"></div></div><div class="qbl">Scan for Datasheet</div></div>
+  <div class="qi"><div class="qt">Digital Datasheet QR</div>
+    <div class="qd">Scan to access the full TF-CCMT120404-TFX-TKC25 datasheet online.<br><br>
+    <strong>URL:</strong> https://toolflux-dev.github.io/toolflux-datasheets/datasheets/turning/TF-CCMT120404-TFX-TK35-Datasheet.html<br>
+    <strong>Contains:</strong> Full cutting data, grade architecture, compatible holders</div></div>
+  <div class="qb"><div class="qr-wrap"><div id="qrBox"></div></div><div class="qbl">Box Label 25×25mm</div></div>
+</div>
+<footer><div class="fl">TOOLFLUX</div>
+<div class="fn">TF-CCMT120404-TFX-TKC25 · REV 01.0 · JUNE 2026<br>All cutting data indicative. Verify on machine before production use.</div>
+<div class="fu">toolflux.co.in</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var ids={"qrHero":"72x72","qrMain":"140x140","qrBox":"96x96"};
+  Object.keys(ids).forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){var i=document.createElement('img');
+      i.src="https://api.qrserver.com/v1/create-qr-code/?size="+ids[id]+"&ecc=H&data=https%3A%2F%2Ftoolflux-dev.github.io%2Ftoolflux-datasheets%2FTF-CCMT120404-TFX-TKC25-Datasheet.html";
+      i.style.display='block';el.appendChild(i);}});});
+</script></body></html>
