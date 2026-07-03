@@ -55,11 +55,11 @@ main{padding:12px clamp(12px,3vw,28px) 48px;display:grid;grid-template-columns:1
 .tscroll::-webkit-scrollbar-thumb{background:var(--acc);border-radius:2px}
 .cut-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--mu);text-transform:uppercase;padding:8px 0 5px;margin-top:2px}
 .cut-sub:first-child{padding-top:0}
-.ctbl{width:100%;border-collapse:collapse;white-space:nowrap;min-width:400px}
+.ctbl{width:100%;border-collapse:collapse;}
 .ctbl th{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;color:var(--mu);text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--brd);text-align:left;background:rgba(255,255,255,0.02)}
 .ctbl td{padding:8px 10px;font-size:12px;border-bottom:1px solid rgba(37,40,48,0.6);vertical-align:middle}
 .ctbl tr:last-child td{border-bottom:none}
-.mc{color:var(--mu);white-space:normal;min-width:130px}
+.mc{color:var(--mu);white-space:normal;}
 .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#3ecf72;margin-right:5px;vertical-align:middle}
 .vc{font-family:'DM Mono',monospace;color:var(--acc)}
 .cut-note{margin-top:9px;font-size:10px;color:var(--mu);font-family:'DM Mono',monospace;line-height:1.8}
@@ -98,6 +98,16 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 .fl{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:4px;color:var(--acc)}
 .fn{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu);letter-spacing:0.8px;text-align:center;flex:1;min-width:160px}
 .fu{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu)}
+
+/* TFX mobile-fix */
+@media(max-width:640px){
+  .ctbl{font-size:10px}
+  .ctbl th{font-size:7px;padding:5px 5px;letter-spacing:.5px}
+  .ctbl td{padding:5px 6px;font-size:10px;white-space:normal}
+  .mc{min-width:50px!important;font-size:9px}
+  .vc{font-size:10px}
+  .cut-sub{font-size:8px}
+}
 </style>
 </head>
 <body>
@@ -112,9 +122,9 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
   <div class="pdesc">C — 80° Diamond · Positive · 80° Point · RE 0.4 mm · External/internal finishing</div>
   <div class="brow">
     <span class="bdg bg">TFX-TPC25</span>
-    <span class="bdg bgr">Finishing / Semi-finishing</span>
+    <span class="bdg bgr">Semi-finish · Light Rough</span>
     <span class="bdg bgy">200–320 m/min</span>
-    <span class="bdg bgy">PVD TiAlN</span>
+    <span class="bdg bgy">CVD MT-TiCN+Al₂O₃</span>
   </div>
 </div>
 
@@ -122,7 +132,7 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
   <div class="qi"><span class="ql">Vc range</span><span class="qv">200–320 m/min</span></div>
   <div class="qi"><span class="ql">fn range</span><span class="qv">0.08–0.20</span></div>
   <div class="qi"><span class="ql">ap max</span><span class="qv">0.3–3.0</span></div>
-  <div class="qi"><span class="ql">Coating</span><span class="qv">PVD TiAlN</span></div>
+  <div class="qi"><span class="ql">Coating</span><span class="qv">CVD MT-TiCN+Al₂O₃</span></div>
 </div>
 
 <main>

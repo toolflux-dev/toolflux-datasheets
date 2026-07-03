@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOOLFLUX | TF-RDKW1204-TFX-MSV25-Datasheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090a0c;--card:#15171b;--brd:#252830;--acc:#e8b84b;--mu:#6e7480;--tx:#dde0e8;--r:4px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:'Barlow',sans-serif;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:#111316;border-bottom:2px solid var(--acc);padding:10px clamp(14px,4vw,36px);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;gap:12px}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,4vw,32px);letter-spacing:5px;color:var(--acc);line-height:1}
+.hg{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--acc);background:rgba(232,184,75,0.1);border:1px solid rgba(232,184,75,0.3);padding:3px 9px;border-radius:var(--r)}
+.hm{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu);letter-spacing:1px;text-align:right}
+@media(max-width:520px){.hm{display:none}}
+.hero{background:linear-gradient(135deg,#14161b 0%,#1b1e25 55%,#111316 100%);border-bottom:1px solid var(--brd);padding:clamp(18px,4vw,36px) clamp(14px,4vw,36px)}
+.pid{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,8vw,54px);letter-spacing:2px;color:var(--tx);line-height:1}
+.pid .hl{color:var(--acc)}
+.pdesc{font-size:clamp(11px,2vw,13px);color:var(--mu);margin-top:5px;font-weight:300}
+.brow{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.bdg{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.2px;padding:4px 10px;border-radius:2px;text-transform:uppercase;font-weight:500;white-space:nowrap}
+.bg{background:rgba(232,184,75,0.13);color:var(--acc);border:1px solid rgba(232,184,75,0.28)}
+.bgr{background:rgba(62,207,114,0.1);color:#3ecf72;border:1px solid rgba(62,207,114,0.28)}
+.bgy{background:rgba(255,255,255,0.04);color:var(--mu);border:1px solid var(--brd)}
+.qs{background:#111316;border-bottom:1px solid var(--brd);display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background-color:var(--brd)}
+@media(min-width:480px){.qs{grid-template-columns:repeat(4,1fr)}}
+.qi{background:#111316;padding:11px 14px;display:flex;flex-direction:column;gap:2px}
+.ql{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;color:var(--mu);text-transform:uppercase}
+.qv{font-family:'DM Mono',monospace;font-size:clamp(12px,2.5vw,14px);color:var(--tx);font-weight:500}
+main{padding:12px clamp(12px,3vw,28px) 48px;display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){main{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);overflow:hidden}
+.full{grid-column:1/-1}
+.ch{background:rgba(232,184,75,0.05);border-bottom:1px solid var(--brd);padding:9px 14px;display:flex;align-items:center;gap:7px}
+.cd{width:5px;height:5px;border-radius:50%;background:var(--acc);flex-shrink:0}
+.ct{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--acc);text-transform:uppercase}
+.cb{padding:13px}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+@media(min-width:420px){.ig{grid-template-columns:repeat(6,1fr)}}
+.isc{border-radius:3px;padding:9px 3px 7px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2px;transition:transform .15s}
+.isc:hover{transform:scale(1.05)}
+.iltr{font-family:'Bebas Neue',sans-serif;font-size:clamp(15px,3.5vw,21px);line-height:1}
+.inm{font-size:clamp(7px,1.5vw,9px);opacity:0.75;text-transform:uppercase}
+.irng{font-family:'DM Mono',monospace;font-size:clamp(6px,1.3vw,8px);opacity:0.88;margin-top:1px}
+.iso-note{margin-top:9px;font-size:10px;color:var(--mu);font-family:'DM Mono',monospace;letter-spacing:0.3px;line-height:1.75}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tscroll::-webkit-scrollbar{height:3px}
+.tscroll::-webkit-scrollbar-thumb{background:var(--acc);border-radius:2px}
+.cut-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--mu);text-transform:uppercase;padding:8px 0 5px;margin-top:2px}
+.cut-sub:first-child{padding-top:0}
+.ctbl{width:100%;border-collapse:collapse;}
+.ctbl th{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;color:var(--mu);text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--brd);text-align:left;background:rgba(255,255,255,0.02)}
+.ctbl td{padding:8px 10px;font-size:12px;border-bottom:1px solid rgba(37,40,48,0.6);vertical-align:middle}
+.ctbl tr:last-child td{border-bottom:none}
+.mc{color:var(--mu);white-space:normal;}
+.dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#3ecf72;margin-right:5px;vertical-align:middle}
+.vc{font-family:'DM Mono',monospace;color:var(--acc)}
+.cut-note{margin-top:9px;font-size:10px;color:var(--mu);font-family:'DM Mono',monospace;line-height:1.8}
+.st{width:100%;border-collapse:collapse}
+.st tr{border-bottom:1px solid var(--brd)}
+.st tr:last-child{border-bottom:none}
+.st td{padding:8px 4px;font-size:12px;vertical-align:middle}
+.st td:first-child{color:var(--mu);width:50%}
+.st td:last-child{font-family:'DM Mono',monospace;color:var(--tx);font-weight:500}
+.ng{margin-top:9px;font-size:11px;line-height:1.6;border-radius:var(--r);padding:8px 11px;background:rgba(62,207,114,0.06);border:1px solid rgba(62,207,114,0.22);color:var(--mu)}
+.nw{margin-top:9px;font-size:11px;line-height:1.6;border-radius:var(--r);padding:8px 11px;background:rgba(201,71,47,0.07);border:1px solid rgba(201,71,47,0.28);color:var(--mu)}
+.ng strong{color:#3ecf72} .nw strong{color:#e06b55}
+.gh{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.gc{font-family:'DM Mono',monospace;font-size:11px;font-weight:700;color:var(--acc);background:rgba(232,184,75,0.1);border:1px solid rgba(232,184,75,0.3);border-radius:var(--r);padding:3px 10px;letter-spacing:1px}
+.dtag{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:0.8px;padding:2px 7px;border-radius:2px;text-transform:uppercase}
+.gdesc{font-size:12px;color:var(--mu);line-height:1.75;margin-bottom:8px}
+.cr{display:flex;gap:9px;align-items:center;padding:7px 0;border-bottom:1px solid var(--brd)}
+.cr:last-of-type{border-bottom:none}
+.ci{width:28px;height:28px;border-radius:50%;background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.2);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.cn2{font-size:12px;font-weight:600;color:var(--tx)}
+.pnc{font-family:'DM Mono',monospace;font-size:clamp(9px,1.8vw,11px);color:var(--acc);background:rgba(232,184,75,0.08);border:1px solid rgba(232,184,75,0.22);border-radius:3px;padding:2px 7px;display:inline-block}
+.hl2{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu);letter-spacing:1px;text-transform:uppercase;margin:10px 0 5px}
+.cl2{margin-top:9px;background:rgba(91,156,246,0.07);border:1px solid rgba(91,156,246,0.25);border-radius:var(--r);padding:9px 12px;font-size:11px;color:var(--mu)}
+.qrs{background:#111316;border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);padding:clamp(14px,3vw,26px) clamp(14px,4vw,36px);display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.qrw{border:2px solid rgba(232,184,75,0.4);border-radius:5px;background:#fff;padding:4px;line-height:0;flex-shrink:0}
+.qri{flex:1;min-width:160px}
+.qrt{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:2px;color:var(--acc);margin-bottom:4px}
+.qrd{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu);word-break:break-all;line-height:1.6}
+.qrd strong{color:var(--tx)}
+footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14px,4vw,36px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.fl{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:4px;color:var(--acc)}
+.fn{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu);letter-spacing:0.8px;text-align:center;flex:1;min-width:160px}
+.fu{font-family:'DM Mono',monospace;font-size:9px;color:var(--mu)}
+@media(max-width:640px){
+  .ctbl{font-size:10px}
+  .ctbl th{font-size:7px;padding:5px 5px;letter-spacing:.5px}
+  .ctbl td{padding:5px 6px;font-size:10px;white-space:normal}
+  .mc{min-width:50px!important;font-size:9px}
+  .vc{font-size:10px}
+  .cut-sub{font-size:8px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">TOOLFLUX</div>
+  <div class="hg">TFX-MSV25</div>
+  <div class="hm">MILLING &middot; TF-MILL ROUND<br>JUNE 2026</div>
+</header>
+<div class="hero">
+  <div class="pid"><span class="hl">RDKW</span>1204</div>
+  <div class="pdesc">Round milling insert &#183; &#216;12 mm &#183; Profile milling &#183; Copy milling &#183; 3D contouring</div>
+  <div class="brow"><span class="bdg bg">TFX-MSV25</span><span class="bdg bgr">Superalloy Milling</span><span class="bdg bgy">20&#8211;100 m/min</span><span class="bdg bgy">PVD TiAlN</span></div>
+</div>
+<div class="qs">
+  <div class="qi"><span class="ql">Vc range</span><span class="qv">20&#8211;100 m/min</span></div>
+  <div class="qi"><span class="ql">fz range</span><span class="qv">0.03&#8211;0.12</span></div>
+  <div class="qi"><span class="ql">ap max</span><span class="qv">&#8212;</span></div>
+  <div class="qi"><span class="ql">Coating</span><span class="qv">PVD TiAlN</span></div>
+</div>
+<main>
+  <div class="card full">
+    <div class="ch"><div class="cd"></div><div class="ct">ISO Material Groups</div></div>
+    <div class="cb"><div class="ig"><div class="isc" style="color:#6aa0ff;background:rgba(30,100,220,0.12);border:1px solid rgba(30,100,220,0.4);opacity:0.22;filter:grayscale(0.8)"><span class="iltr">P</span><span class="inm">Steel</span><span class="irng">&#8212;</span></div><div class="isc" style="color:#ffd84a;background:rgba(255,200,0,0.10);border:1px solid rgba(255,200,0,0.35);opacity:0.22;filter:grayscale(0.8)"><span class="iltr">M</span><span class="inm">Stainless</span><span class="irng">&#8212;</span></div><div class="isc" style="color:#ff7a6a;background:rgba(220,50,50,0.10);border:1px solid rgba(220,50,50,0.35);opacity:0.22;filter:grayscale(0.8)"><span class="iltr">K</span><span class="inm">Cast Iron</span><span class="irng">&#8212;</span></div><div class="isc" style="color:#3ecfa0;background:rgba(0,200,150,0.08);border:1px solid rgba(0,200,150,0.2);opacity:0.22;filter:grayscale(0.8)"><span class="iltr">N</span><span class="inm">Non-Ferrous</span><span class="irng">&#8212;</span></div><div class="isc" style="color:#ffaa55;background:rgba(200,100,0,0.08);border:1px solid rgba(200,100,0,0.2);opacity:1;filter:"><span class="iltr">S</span><span class="inm">Superalloy</span><span class="irng">S15&#8211;S35</span></div><div class="isc" style="color:#c080ff;background:rgba(140,0,220,0.08);border:1px solid rgba(140,0,220,0.2);opacity:0.22;filter:grayscale(0.8)"><span class="iltr">H</span><span class="inm">Hardened</span><span class="irng">&#8212;</span></div></div><div class="iso-note">PRIMARY &middot; S &#8212; Nickel superalloys (Inconel), titanium alloys, cobalt alloys (S15&#8211;S35)
+NOT RECOMMENDED &middot; P, M, K, N, H</div></div>
+  </div>
+  <div class="card full">
+    <div class="ch"><div class="cd"></div><div class="ct">Cutting Data</div></div>
+    <div class="cb"><div class="tscroll"><table class="ctbl"><thead><tr><th>Material</th><th>Hardness</th><th>Vc (m/min)</th><th>fz (mm/tooth)</th><th>Coolant</th></tr></thead><tbody><tr><td class="mc"><span class="dot"></span>Inconel 718 (S1)</td><td>300&#8211;380 HB</td><td class="vc">20&#8211;45</td><td>0.03&#8211;0.08</td><td>Required</td></tr><tr><td class="mc"><span class="dot"></span>Ti-6Al-4V (S2)</td><td>300&#8211;350 HB</td><td class="vc">40&#8211;80</td><td>0.04&#8211;0.10</td><td>Required</td></tr><tr><td class="mc"><span class="dot"></span>Cobalt Alloys (S3)</td><td>350&#8211;450 HB</td><td class="vc">15&#8211;35</td><td>0.02&#8211;0.06</td><td>Required</td></tr></tbody></table></div><p class="cut-note">&#9888; Flood coolant mandatory &#8212; never dry-mill superalloys. Low Vc is correct. Push higher fz for productivity, not Vc. Climb milling only &#8212; conventional causes edge chipping on S-group.</p></div>
+  </div>
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Insert Geometry</div></div>
+    <div class="cb"><table class="st"><tr><td>Insert Type</td><td>RDKW &#8212; Round Double-Sided</td></tr><tr><td>Cutting Edges</td><td>4 (double-sided)</td></tr><tr><td>Diameter (IC)</td><td>12 mm</td></tr><tr><td>Corner Radius (RE)</td><td>6 mm (full round)</td></tr><tr><td>Thickness (S)</td><td>4.0 mm</td></tr><tr><td>Max Axial DOC (ap)</td><td>&#8804; 4 mm</td></tr><tr><td>ISO Designation</td><td>RDKW 1204MO</td></tr></table></div>
+  </div>
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Grade TFX-MSV25</div></div>
+    <div class="cb">
+      <div class="gh"><span class="gc">TFX-MSV25</span><span class="dtag" style="background:rgba(62,207,114,0.1);color:#3ecf72;border:1px solid rgba(62,207,114,0.25)">PVD</span><span class="dtag" style="background:rgba(255,170,85,0.1);color:#ffaa55;border:1px solid rgba(255,170,85,0.25)">S15&#8211;S35</span></div>
+      <p class="gdesc">PVD grade for superalloy milling. Substrate toughness handles high intermittent cutting forces. Always use flood coolant &#8212; superalloys retain heat at the edge and accelerate diffusion wear without it.</p>
+      <div class="cr"><div class="ci">&#11042;</div><div><div class="cn2">PVD TiAlN</div></div></div>
+      <div class="cr"><div class="ci">&#10699;</div><div><div class="cn2">Fine-grain WC-Co (~1600 HV)</div></div></div>
+    </div>
+  </div>
+  <div class="card full">
+    <div class="ch"><div class="cd"></div><div class="ct">Part Information</div></div>
+    <div class="cb">
+      <table class="st">
+        <tr><td>TOOLFLUX Part No.</td><td><span class="pnc">TF-RDKW1204-TFX-MSV25</span></td></tr>
+        <tr><td>Grade</td><td>TFX-MSV25</td></tr>
+        <tr><td>Series</td><td>TF-MILL ROUND</td></tr>
+        <tr><td>Pack Quantity</td><td>10 pcs / box</td></tr>
+      </table>
+      <div class="hl2">Compatible Holders</div><table class="st"><tr><td>SRD-R16-4T-R6</td><td>Round-insert end mill &#183; &#216;16 mm</td></tr><tr><td>SRD-R25-4T-R6</td><td>Round-insert end mill &#183; &#216;25 mm</td></tr></table><div class="cl2">&#128299; Clamping Screw &#8212; M3 &#215; 6 mm &#183; Torx T10 &#183; 1.5&#8211;2.0 Nm</div>
+    </div>
+  </div>
+</main>
+<div class="qrs">
+  <div class="qrw"><div id="qr"></div></div>
+  <div class="qri">
+    <div class="qrt">Digital Datasheet</div>
+    <div class="qrd"><strong>URL:</strong> https://toolflux-dev.github.io/toolflux-datasheets/datasheets/milling/TF-RDKW1204-TFX-MSV25-Datasheet.html<br>Scan to access live cutting data and compatible holders.</div>
+  </div>
+</div>
+<footer>
+  <div class="fl">TOOLFLUX</div>
+  <div class="fn">TF-RDKW1204-TFX-MSV25-Datasheet &middot; REV 01.0 &middot; JUNE 2026<br>Cutting data indicative &#8212; verify on machine before production use.</div>
+  <div class="fu">toolflux.co.in</div>
+</footer>
+<script>
+(function(){var u="https://toolflux-dev.github.io/toolflux-datasheets/datasheets/milling/TF-RDKW1204-TFX-MSV25-Datasheet.html",s=document.createElement('script');
+s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+s.onload=function(){new QRCode(document.getElementById('qr'),{text:u,width:96,height:96,colorDark:'#000',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.M})};
+document.head.appendChild(s)})();
+</script>
+</body>
+</html>
