@@ -130,8 +130,8 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
 <div class="qs">
   <div class="qi"><span class="ql">Vc range</span><span class="qv">80–150 m/min</span></div>
-  <div class="qi"><span class="ql">fn range</span><span class="qv">0.12–0.30</span></div>
-  <div class="qi"><span class="ql">ap max</span><span class="qv">0.5–2.5</span></div>
+  <div class="qi"><span class="ql">fn (RE 0.8)</span><span class="qv">0.08–0.20</span></div>
+  <div class="qi"><span class="ql">ap range</span><span class="qv">0.5–2.5 mm</span></div>
   <div class="qi"><span class="ql">Coating</span><span class="qv">PVD AlTiN</span></div>
 </div>
 
@@ -146,14 +146,15 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
   <div class="card full">
     <div class="ch"><div class="cd"></div><div class="ct">Cutting Data</div></div>
-    <div class="cb"><div class="tscroll"><table class="ctbl"><thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fn mm/rev (RE=0.8)</th><th>ap (mm)</th><th>Coolant</th></tr></thead><tbody><tr><td class="mc"><span class="dot"></span>Duplex Stainless 2205 (M2)</td><td>220–280 HB</td><td class="vc">80–140</td><td>0.12–0.30</td><td>0.5–2.5</td><td>Required</td></tr><tr><td class="mc"><span class="dot"></span>Super Duplex 2507 (M3)</td><td>260–310 HB</td><td class="vc">60–120</td><td>0.09–0.22</td><td>0.3–1.5</td><td>Required</td></tr><tr><td class="mc"><span class="dot"></span>Austenitic — Roughing (M1)</td><td>150–220 HB</td><td class="vc">100–160</td><td>0.15–0.38</td><td>0.5–2.5</td><td>Required</td></tr></tbody></table></div><p class="cut-note">● Vc=cutting speed · fn=feed/rev · ap=depth of cut ⚠ fn scaled for RE 0.8mm. Max fn ≤ RE/2 for best Ra. Start at lower values until chip form is stable.</p></div>
+    <div class="cb"><div class="tscroll"><table class="ctbl"><thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fn mm/rev (RE=0.8)</th><th>ap (mm)</th><th>Coolant</th></tr></thead><tbody><tr><td class="mc"><span class="dot"></span>Duplex Stainless 2205 (M2)</td><td>220–280 HB</td><td class="vc">80–140</td><td>0.12–0.20</td><td>0.5–2.5</td><td>Required</td></tr><tr><td class="mc"><span class="dot"></span>Super Duplex 2507 (M3)</td><td>260–310 HB</td><td class="vc">60–120</td><td>0.09–0.20</td><td>0.3–1.5</td><td>Required</td></tr><tr><td class="mc"><span class="dot"></span>Austenitic — Roughing (M1)</td><td>150–220 HB</td><td class="vc">100–160</td><td>0.15–0.20</td><td>0.5–2.5</td><td>Required</td></tr></tbody></table></div><p class="cut-note">● Vc=cutting speed · fn=feed/rev · ap=depth of cut ⚠ fn scaled for RE 0.8mm. Max fn ≤ RE/2 for best Ra. Start at lower values until chip form is stable.</p></div>
   </div>
 
   <div class="card">
     <div class="ch"><div class="cd"></div><div class="ct">Insert Geometry</div></div>
     <div class="cb">
       <table class="st"><tr><td>Shape</td><td>C — 80° Diamond</td></tr><tr><td>Point Angle</td><td>80°</td></tr><tr><td>Rake</td><td>Positive (7° clearance)</td></tr><tr><td>Inscribed Circle</td><td>6.35 mm</td></tr><tr><td>Thickness (S)</td><td>2.38 mm</td></tr><tr><td>Edge Length (LE)</td><td>6.3 mm</td></tr><tr><td>Corner Radius (RE)</td><td>0.8 mm</td></tr><tr><td>Cutting Edges</td><td>2</td></tr><tr><td>Hole Diameter (D1)</td><td>2.8 mm</td></tr><tr><td>ISO Designation</td><td>CCMT060208</td></tr></table>
-      <div class="ng">RE 0.8 mm: Typical surface Ra 1.6–3.2 µm.</div>
+      <div class="hl2">Feed vs finish — theoretical Ra at RE 0.8</div><table class="st"><tr><td>fn 0.20 mm/rev</td><td>Ra 1.6 µm — fine finish</td></tr><tr><td>fn 0.30 mm/rev</td><td>Ra 3.5 µm — finish</td></tr><tr><td>fn 0.40 mm/rev</td><td>Ra 6.3 µm — semi-finish</td></tr><tr><td>fn 0.50 mm/rev</td><td>Ra 9.8 µm — general</td></tr></table>
+      <div class="ng">Ra = fn²/(32·RE). For finish passes keep fn ≤ 0.40 — beyond that the 0.8 mm nose geometry dominates the surface.</div>
     </div>
   </div>
 
@@ -167,7 +168,20 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
     </div>
   </div>
 
-  <div class="card full">
+  
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Setup &amp; First Cut</div></div>
+    <div class="cb"><table class="st"><tr><td>First cut</td><td>Vc 170 · fn 0.15 · ap 1.25</td></tr><tr><td>Interrupted / scaled skin</td><td>Vc 136 · keep fn steady · ap below skin</td></tr><tr><td>Tool overhang</td><td>≤ 1.5 × shank height</td></tr><tr><td>Finish pass</td><td>fn ≤ 0.40 · ap 0.3–0.8</td></tr><tr><td>Coolant</td><td>Flood aids chip control and size hold</td></tr></table>
+      <div class="ng"><strong>Why start here:</strong> mid-range Vc with moderate feed shows chip form and wear behaviour fast — then push Vc for productivity or drop fn for finish.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Troubleshooting</div></div>
+    <div class="cb"><table class="st"><tr><td>Rapid flank wear</td><td>Reduce Vc 15–20%</td></tr><tr><td>Built-up edge</td><td>Raise Vc, or raise fn slightly</td></tr><tr><td>Edge chipping</td><td>Lower fn · shorten overhang · check clamp torque</td></tr><tr><td>Poor finish</td><td>Raise Vc · drop fn ≤ RE/2 · inspect nose wear</td></tr><tr><td>Chip snarling</td><td>Raise fn · keep ap ≥ 0.5 so chipbreaker engages</td></tr></table>
+      <div class="nw"><strong>Vibration?</strong> Biggest cause is overhang. Halving overhang stiffens the setup 8&times; (stiffness &prop; 1/L&sup3;) &mdash; fix that before touching cutting data.</div></div>
+  </div>
+
+<div class="card full">
     <div class="ch"><div class="cd"></div><div class="ct">Part Information</div></div>
     <div class="cb">
       <table class="st">
@@ -176,8 +190,8 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
         <tr><td>Series</td><td>TF-TURN STANDARD</td></tr>
         <tr><td>Pack Quantity</td><td>10 pcs / box</td></tr>
       </table>
-      <div class="hl2">Compatible Holders</div><table class="st"><tr><td>SCLCR/SCLCL 1212H06</td><td>Compatible holder</td></tr><tr><td>SDJCR/SDJCL 1212H06</td><td>Compatible holder</td></tr></table>
-      <div class="cl2">🔩 Clamping Screw — M2.5 × 6 mm — M2.5 × 6 mm · Torx T8 · 1.0–1.5 Nm — Use calibrated torque wrench. Loose insert shifts tip radius and damages surface finish.</div>
+      <div class="hl2">Compatible Holders</div><table class="st"><tr><td>SCLCR/SCLCL 1212H06</td><td>Compatible holder</td></tr><tr><td>SCACR/SCACL 1616H06</td><td>External · 90° lead</td></tr><tr><td>S12M-SCLCR06</td><td>Internal boring · min bore Ø16</td></tr></table>
+      <div class="cl2">🔩 Clamping Screw — M2.5 × 6 mm· · Torx T8 · 1.0–1.5 Nm — Use calibrated torque wrench. Loose insert shifts tip radius and damages surface finish.</div>
     </div>
   </div>
 </main>
@@ -192,7 +206,7 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
 <footer>
   <div class="fl">TOOLFLUX</div>
-  <div class="fn">TF-CCMT060208-TFX-TMC25 · REV 01.0 · JUNE 2026<br>Cutting data indicative — verify on machine before production use.</div>
+  <div class="fn">TF-CCMT060208-TFX-TMC25 · REV 01.1 · JULY 2026<br>Cutting data indicative — verify on machine before production use.</div>
   <div class="fu">toolflux.co.in</div>
 </footer>
 <script>

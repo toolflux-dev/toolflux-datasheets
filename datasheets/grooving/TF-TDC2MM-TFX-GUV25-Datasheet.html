@@ -167,7 +167,20 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
     </div>
   </div>
 
-  <div class="card full">
+  
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Setup &amp; First Cut</div></div>
+    <div class="cb"><table class="st"><tr><td>Centre height</td><td>± 0.1 mm — most grooving failures start here</td></tr><tr><td>Overhang</td><td>Absolute minimum — grooving is vibration-sensitive</td></tr><tr><td>First cut</td><td>Mid Vc · fn at lower bound</td></tr><tr><td>Wide grooves</td><td>Multiple plunges, ≤ 0.8 × insert width step-over</td></tr><tr><td>Coolant</td><td>Directed into the groove, high pressure</td></tr></table>
+      <div class="ng"><strong>Why start here:</strong> the insert is fully buried in the cut — rigidity and chip evacuation decide everything before cutting data does.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Troubleshooting</div></div>
+    <div class="cb"><table class="st"><tr><td>Chip jamming in groove</td><td>Peck lightly · raise coolant pressure</td></tr><tr><td>Insert breakage</td><td>Check centre height ± 0.1 mm · reduce fn</td></tr><tr><td>Burr formation</td><td>Raise Vc · use sharp unworn edge</td></tr><tr><td>Tapered walls</td><td>Check holder squareness to axis</td></tr><tr><td>Poor floor finish</td><td>Lower fn on final pass · brief dwell at depth</td></tr></table>
+      <div class="nw"><strong>Vibration?</strong> Biggest cause is overhang. Halving overhang stiffens the setup 8&times; (stiffness &prop; 1/L&sup3;) &mdash; fix that before touching cutting data.</div></div>
+  </div>
+
+<div class="card full">
     <div class="ch"><div class="cd"></div><div class="ct">Part Information</div></div>
     <div class="cb">
       <table class="st">
@@ -177,7 +190,7 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
         <tr><td>Pack Quantity</td><td>10 pcs / box</td></tr>
       </table>
       <div class="hl2">Compatible Holders</div><table class="st"><tr><td>MGEHR2020K-2</td><td>Compatible grooving holder</td></tr><tr><td>MGIVR2016-2</td><td>Compatible grooving holder</td></tr></table>
-      <div class="cl2">🔩 Clamping Screw — M3 × 8 mm — M3 × 8 mm · Torx T10 · 1.5–2.0 Nm</div>
+      <div class="cl2">🔩 Clamping Screw — M3 × 8 mm· · Torx T10 · 1.5–2.0 Nm</div>
     </div>
   </div>
 </main>
@@ -192,7 +205,7 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
 <footer>
   <div class="fl">TOOLFLUX</div>
-  <div class="fn">TF-TDC2.0MM-TFX-GUV25 · REV 01.0 · JUNE 2026<br>Cutting data indicative — verify on machine before production use.</div>
+  <div class="fn">TF-TDC2.0MM-TFX-GUV25 · REV 01.1 · JULY 2026<br>Cutting data indicative — verify on machine before production use.</div>
   <div class="fu">toolflux.co.in</div>
 </footer>
 <script>

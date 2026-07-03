@@ -28,7 +28,7 @@
   --iso-N:   #4ec994;
   --iso-S:   #c88a2a;
   --iso-H:   #9480c8;
-  /* TiN gold */
+  /* TiAlN gold */
   --tin:     #d4a843;
 }
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -160,7 +160,7 @@ main { display:grid; grid-template-columns:1fr 1fr; gap:1px;
               color:var(--accent); margin-bottom:4px; text-transform:uppercase; }
 .coat-desc { font-size:11px; color:var(--muted); line-height:1.7; }
 
-/* TiN layers diagram */
+/* TiAlN layers diagram */
 .tin-layers { margin:14px 0 10px; border:1px solid var(--border); border-radius:3px; overflow:hidden; }
 .tin-layer { display:flex; align-items:center; justify-content:space-between;
              padding:7px 12px; font-family:'DM Mono',monospace; font-size:10px; }
@@ -373,7 +373,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 </div>
 <div class="doc-meta">
 <div>PART NO. <span>TF-APMT1604-TFX-MHV20</span></div>
-<div>GRADE <span>TFX-MHV20</span> · TiN PVD · ISO H</div>
+<div>GRADE <span>TFX-MHV20</span> · TiAlN PVD · ISO H</div>
 <div>REV <span>01.0</span> · JUNE 2026</div>
 </div>
 </header>
@@ -386,7 +386,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <div class="part-desc">85° Parallelogram · Positive Rake · 16mm · Single-Sided · Screw Clamp</div>
 <div class="badge-row">
 <span class="badge b-violet">ISO H · Hardened Steel</span>
-<span class="badge b-tin">TiN PVD</span>
+<span class="badge b-tin">TiAlN PVD</span>
 <span class="badge b-grey">Face &amp; Shoulder Mill</span>
 </div>
 <!-- NEW: Application chips -->
@@ -406,7 +406,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <stop offset="0%" stop-color="#252830"></stop>
 <stop offset="100%" stop-color="#14161b"></stop>
 </radialgradient>
-<!-- TiN gold shimmer -->
+<!-- TiAlN gold shimmer -->
 <lineargradient id="tin-coat" x1="0%" x2="100%" y1="0%" y2="100%">
 <stop offset="0%" stop-color="#d4a843" stop-opacity=".18"></stop>
 <stop offset="50%" stop-color="#e8b84b" stop-opacity=".08"></stop>
@@ -419,9 +419,9 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 </defs>
 <!-- Larger body for 1604 -->
 <rect fill="url(#rg)" filter="url(#glow)" height="100" rx="9" ry="9" stroke="#9480c8" stroke-width="1.4" width="100" x="16" y="14"></rect>
-<!-- TiN coating shimmer overlay -->
+<!-- TiAlN coating shimmer overlay -->
 <rect fill="url(#tin-coat)" height="100" rx="9" ry="9" width="100" x="16" y="14"></rect>
-<!-- Active cutting edges top + right — TiN gold -->
+<!-- Active cutting edges top + right — TiAlN gold -->
 <line stroke="#d4a843" stroke-linecap="round" stroke-width="3" x1="25" x2="107" y1="14" y2="14"></line>
 <line stroke="#d4a843" stroke-linecap="round" stroke-width="3" x1="116" x2="116" y1="23" y2="105"></line>
 <circle cx="116" cy="14" fill="#d4a843" opacity=".85" r="5"></circle>
@@ -433,7 +433,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <circle cx="66" cy="64" fill="rgba(9,10,12,.9)" opacity=".4" r="5.5" stroke="#9480c8" stroke-width=".8"></circle>
 <!-- Edge labels -->
 <text fill="#6e7480" font-family="DM Mono, monospace" font-size="7" text-anchor="middle" x="66" y="133">W 12.7 mm · L 16.0 mm · 2 EDGES</text>
-<text fill="#9480c8" font-family="DM Mono, monospace" font-size="6.5" text-anchor="middle" x="66" y="143">APMT 1604 · TiN COATED</text>
+<text fill="#9480c8" font-family="DM Mono, monospace" font-size="6.5" text-anchor="middle" x="66" y="143">APMT 1604 · TiAlN COATED</text>
 </svg>
 </div>
 <!-- HERO QR -->
@@ -462,7 +462,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 </div>
 <div class="qs-item" style="border-right:none">
 <div class="qs-label">Coating Temp Limit</div>
-<div class="qs-val">600<span class="qs-unit">°C</span></div>
+<div class="qs-val">≈ 800 °C<span class="qs-unit">°C</span></div>
 </div>
 </div>
 <!-- ══════════ MAIN CONTENT ══════════ -->
@@ -494,21 +494,21 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <div class="grade-desc-header">
 <span class="grade-chip">TFX-MHV20</span>
 <span class="gdtag pvd">PVD</span>
-<span class="gdtag tin">TiN</span>
+<span class="gdtag tin">TiAlN</span>
 <span class="gdtag rh">H10–H25</span>
 </div>
-<div class="grade-desc-body">PVD Titanium Nitride (TiN) coating on ultra-fine cemented carbide substrate, purpose-engineered for milling hardened steels and tool steels from 45–62 HRC. The TiN layer's low friction coefficient (µ ≈ 0.4) minimises adhesion and heat generation at the edge — critical when machining hardened material where thermal runaway accelerates edge collapse. The gold-coloured TiN layer also provides instant visual wear indication: when the TiN colour disappears from the edge, the insert is at end-of-life. Primary application is finish and semi-finish face milling and shoulder milling of die steels, tool steels, and through-hardened alloy steel.</div>
+<div class="grade-desc-body">PVD TiAlN coating on ultra-fine cemented carbide substrate, purpose-engineered for milling hardened steels and tool steels up to ~55 HRC. Under cutting heat TiAlN forms a stable aluminium-oxide surface film, keeping the coating hard at temperatures where TiAlN would already have oxidised — the property that makes hardened-steel milling possible at all. The sharp PVD edge minimises cutting forces on the brittle workpiece surface. Primary application is finish and semi-finish face milling and shoulder milling of die steels, tool steels, and through-hardened alloy steel.</div>
 </div>
-<!-- TiN layers cross-section diagram -->
+<!-- TiAlN layers cross-section diagram -->
 <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">Coating Cross-Section</div>
 <div class="tin-layers">
 <div class="tin-layer" style="background:rgba(212,168,67,.18);">
-<span class="tl-name" style="color:var(--tin)">TiN — Titanium Nitride</span>
+<span class="tl-name" style="color:var(--tin)">TiAlN — Titanium Nitride</span>
 <div class="tl-bar" style="background:linear-gradient(90deg,#d4a843,#e8b84b);"></div>
 <span class="tl-thick">2–4 µm</span>
 </div>
 <div class="tin-layer" style="background:rgba(148,128,200,.08);">
-<span class="tl-name">TiN Bond Layer</span>
+<span class="tl-name">TiAlN Bond Layer</span>
 <div class="tl-bar" style="background:rgba(148,128,200,.5);width:30%;"></div>
 <span class="tl-thick">0.5–1 µm</span>
 </div>
@@ -521,15 +521,15 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <div class="coat-row">
 <div class="coat-icon">◈</div>
 <div>
-<div class="coat-label">TiN Low-Friction Surface</div>
-<div class="coat-desc">Friction coefficient µ ≈ 0.4 — significantly lower than uncoated carbide (µ ≈ 0.7). This reduces the heat generated at the chip-edge interface when cutting hardened material, where thermal management is the primary challenge. TiN's smooth surface also resists built-up edge formation on sticky alloy steels.</div>
+<div class="coat-label">TiAlN Low-Friction Surface</div>
+<div class="coat-desc">Friction coefficient µ ≈ 0.4 — significantly lower than uncoated carbide (µ ≈ 0.7). This reduces the heat generated at the chip-edge interface when cutting hardened material, where thermal management is the primary challenge. TiAlN's smooth surface also resists built-up edge formation on sticky alloy steels.</div>
 </div>
 </div>
 <div class="coat-row">
 <div class="coat-icon">◉</div>
 <div>
 <div class="coat-label">Visual Wear Indicator</div>
-<div class="coat-desc">The characteristic gold colour of TiN acts as a built-in wear indicator. When the gold film wears away from the cutting edge, the silver-grey substrate becomes visible — a clear signal that the insert has reached end-of-life and must be indexed or replaced before edge collapse damages the workpiece.</div>
+<div class="coat-desc">The characteristic gold colour of TiAlN acts as a built-in wear indicator. When the gold film wears away from the cutting edge, the silver-grey substrate becomes visible — a clear signal that the insert has reached end-of-life and must be indexed or replaced before edge collapse damages the workpiece.</div>
 </div>
 </div>
 <div class="coat-row">
@@ -608,7 +608,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 </div>
 <!-- 4 · CUTTING DATA (full width) -->
 <div class="card span2">
-<div class="card-head"><div class="card-dot"></div><div class="card-title">Cutting Data — Milling Parameters (TiN PVD · TFX-MHV20 · ISO Hardened Material)</div></div>
+<div class="card-head"><div class="card-dot"></div><div class="card-title">Cutting Data — Milling Parameters (TiAlN PVD · TFX-MHV20 · ISO Hardened Material)</div></div>
 <div class="card-body">
 <div class="cut-wrap">
 <table class="cut-tbl">
@@ -665,9 +665,9 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 </div>
 <div class="cut-note">
         ● Violet dots = primary H-group materials  ·  Vc = cutting speed  ·  fz = feed per tooth  ·  ap = axial depth  ·  ae = radial engagement<br/>
-        ⚠ <strong>Avoid flood coolant on hardened materials</strong> — thermal shock from sudden cooling causes micro-cracking in both the workpiece surface and the TiN coating. Use MQL (minimum quantity lubrication) or dry milling only.<br/>
+        ⚠ <strong>Avoid flood coolant on hardened materials</strong> — thermal shock from sudden cooling causes micro-cracking in both the workpiece surface and the TiAlN coating. Use MQL (minimum quantity lubrication) or dry milling only.<br/>
         ⚠ ap in hardened steel is intentionally very low. Deep cuts in hardened material generate excessive radial forces that cause edge chipping. Build up depth gradually.<br/>
-        ⚠ Start at the lower Vc bound. TiN degrades above 600°C — if chips begin to show blue/violet heat colours, reduce Vc immediately by 15%.
+        ⚠ Start at the lower Vc bound. TiAlN degrades above 600°C — if chips begin to show blue/violet heat colours, reduce Vc immediately by 15%.
       </div>
 <!-- NEW: Hard material warning panel -->
 <div class="hard-warn">
@@ -677,7 +677,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <div class="warn-item"><span class="warn-ok s-check">✓</span><span>Workholding: hydraulic or mechanical fixture. Vibration &lt; 2 µm at spindle nose.</span></div>
 <div class="warn-item"><span class="warn-ok s-check">✓</span><span>Climb milling (conventional milling causes edge micro-chipping in hardened work).</span></div>
 <div class="warn-item"><span class="warn-ok s-check">✓</span><span>Radial runout: max 0.005 mm. Check with dial gauge before each run.</span></div>
-<div class="warn-item"><span class="warn-bad s-cross">✗</span><span>No flood coolant — thermal shock destroys TiN coating and causes surface cracking.</span></div>
+<div class="warn-item"><span class="warn-bad s-cross">✗</span><span>No flood coolant — thermal shock destroys TiAlN coating and causes surface cracking.</span></div>
 <div class="warn-item"><span class="warn-bad s-cross">✗</span><span>No interrupted heavy passes — ap must not exceed 0.5 mm in H-group material.</span></div>
 <div class="warn-item"><span class="warn-bad s-cross">✗</span><span>Never ramp or plunge into hardened material — axial entry force will fracture insert.</span></div>
 <div class="warn-item"><span class="warn-bad s-cross">✗</span><span>Do not run vibrating or chattering. Stop and fix resonance before resuming.</span></div>
@@ -687,11 +687,11 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 </div>
 <!-- 5 · PART NUMBERS & HOLDERS -->
 <div class="card">
-<div class="card-head"><div class="card-dot"></div><div class="card-title">TOOLFLUX Part Number &amp; Compatible Holders</div></div>
+<div class="card-head"><div class="card-dot"></div><div class="card"><div class="card-head"><div class="card-dot"></div><div class="card-title">Setup &amp; First Cut</div></div><div class="card-body"><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Milling direction</span><span class="mono" style="text-align:right">Climb (down) milling preferred</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Runout at insert</span><span class="mono" style="text-align:right">≤ 0.02 mm — check before cutting</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">First cut</span><span class="mono" style="text-align:right">Mid-range Vc · mid fz · ap ≤ half of max</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Entry</span><span class="mono" style="text-align:right">Roll into cut where possible — avoid straight plunge</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Coolant</span><span class="mono" style="text-align:right">Dry or air blast preferred for carbide milling</span></div><div style="margin-top:9px;font-size:11px;line-height:1.6;border-radius:4px;padding:8px 11px;background:rgba(62,207,114,0.06);border:1px solid rgba(62,207,114,0.22);color:#6e7480"><strong style='color:#3ecf72'>Why start here:</strong> interrupted cutting punishes carbide through thermal cycling — moderate dry parameters usually outlive flooded aggressive ones.</div></div></div><div class="card"><div class="card-head"><div class="card-dot"></div><div class="card-title">Troubleshooting</div></div><div class="card-body"><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Rapid flank wear</span><span class="mono" style="text-align:right">Reduce Vc 15–20%</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Edge chipping</span><span class="mono" style="text-align:right">Lower fz · check runout ≤ 0.02 mm · check seat</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Built-up edge</span><span class="mono" style="text-align:right">Raise Vc or fz · avoid re-cutting chips</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Poor finish</span><span class="mono" style="text-align:right">Check runout first · then lower fz</span></div><div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #252830;font-size:12px"><span style="color:#6e7480">Vibration</span><span class="mono" style="text-align:right">Fewer teeth in cut · lower ap · shorten overhang</span></div><div style="margin-top:9px;font-size:11px;line-height:1.6;border-radius:4px;padding:8px 11px;background:rgba(62,207,114,0.06);border:1px solid rgba(62,207,114,0.22);color:#6e7480"><strong style='color:#3ecf72'>Vibration?</strong> Fewer teeth in cut and shorter overhang beat any cutting-data change.</div></div></div><div class="card-title">TOOLFLUX Part Number &amp; Compatible Holders</div></div>
 <div class="card-body">
 <table class="spec-tbl">
 <tr><td>TOOLFLUX Part No.</td><td><span class="pn-highlight">TF-APMT1604-TFX-MHV20</span></td></tr>
-<tr><td>Grade</td><td>TFX-MHV20 (TiN PVD)</td></tr>
+<tr><td>Grade</td><td>TFX-MHV20 (TiAlN PVD)</td></tr>
 <tr><td>Series</td><td>TF-MILL HARDENED</td></tr>
 <tr><td>Pack Qty</td><td>10 pcs / box</td></tr>
 <tr><td>ISO Designation</td><td>APMT 1604</td></tr>
@@ -723,7 +723,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <span class="app-icon">⬛</span>
 <div>
 <strong>Face Milling — Finish Pass</strong>
-<p>Primary application. Flat surface finishing of hardened die and tool steel. Max ap 0.3–0.5 mm, ae 60–75% of cutter diameter. Produces Ra 0.4–0.8 µm surface finish when setup rigidity is adequate. Replace insert at first sign of TiN colour loss from the cutting edge.</p>
+<p>Primary application. Flat surface finishing of hardened die and tool steel. Max ap 0.3–0.5 mm, ae 60–75% of cutter diameter. Produces Ra 0.4–0.8 µm surface finish when setup rigidity is adequate. Replace insert at first sign of TiAlN colour loss from the cutting edge.</p>
 </div>
 </li>
 <li>
@@ -754,7 +754,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <li><span class="s-cross">✗</span><span>Run without first test-cutting at minimum Vc</span></li>
 </ul>
 <div class="tip-box">
-<strong>TiN Wear Monitoring:</strong> The gold TiN colour is your wear indicator. After each pass, visually inspect the cutting edge under good lighting. When the gold film disappears from the tip or along the flank, index or replace immediately — running an exposed carbide substrate on hardened material causes catastrophic edge collapse within seconds and can damage the workpiece surface irreparably.
+<strong>TiAlN Wear Monitoring:</strong> The gold TiAlN colour is your wear indicator. After each pass, visually inspect the cutting edge under good lighting. When the gold film disappears from the tip or along the flank, index or replace immediately — running an exposed carbide substrate on hardened material causes catastrophic edge collapse within seconds and can damage the workpiece surface irreparably.
       </div>
 </div>
 </div>
@@ -783,7 +783,7 @@ footer { background:var(--dark); border-top:1px solid var(--border);
 <footer>
 <div class="footer-logo">TOOLFLUX</div>
 <div class="footer-note">
-    TF-APMT1604-TFX-MHV20 · TiN PVD · ISO H10–H25 · REV 01.0 · JUNE 2026<br/>
+    TF-APMT1604-TFX-MHV20 · TiAlN PVD · ISO H10–H25 · REV 01.1 · JULY 2026<br/>
     All cutting data indicative. Verify and optimise parameters on your machine before production. Hardened material parameters are critical — always conduct a trial pass.
   </div>
 <div class="footer-url">toolflux.co.in</div>

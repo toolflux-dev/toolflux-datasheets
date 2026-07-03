@@ -130,8 +130,8 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
 <div class="qs">
   <div class="qi"><span class="ql">Vc range</span><span class="qv">250–400 m/min</span></div>
-  <div class="qi"><span class="ql">fn range</span><span class="qv">0.08–0.25</span></div>
-  <div class="qi"><span class="ql">ap max</span><span class="qv">0.3–3.5</span></div>
+  <div class="qi"><span class="ql">fn (RE 0.4)</span><span class="qv">0.10–0.30</span></div>
+  <div class="qi"><span class="ql">ap range</span><span class="qv">0.5–6 mm</span></div>
   <div class="qi"><span class="ql">Coating</span><span class="qv">CVD Al₂O₃ + TiN</span></div>
 </div>
 
@@ -146,14 +146,15 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
   <div class="card full">
     <div class="ch"><div class="cd"></div><div class="ct">Cutting Data</div></div>
-    <div class="cb"><div class="tscroll"><table class="ctbl"><thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fn mm/rev (RE=0.4)</th><th>ap (mm)</th><th>Coolant</th></tr></thead><tbody><tr><td class="mc"><span class="dot"></span>Grey CI GG25/GG30 (K1)</td><td>180–240 HB</td><td class="vc">250–400</td><td>0.08–0.25</td><td>0.3–3.5</td><td>Dry</td></tr><tr><td class="mc"><span class="dot"></span>Ductile CI GGG50 (K2)</td><td>180–260 HB</td><td class="vc">180–300</td><td>0.08–0.20</td><td>0.3–3.0</td><td>Dry / Optional</td></tr><tr><td class="mc"><span class="dot"></span>Steel — secondary (P1)</td><td>≤200 HB</td><td class="vc">160–240</td><td>0.08–0.20</td><td>0.3–2.5</td><td>Optional</td></tr></tbody></table></div><p class="cut-note">● Vc=cutting speed · fn=feed/rev · ap=depth of cut ⚠ fn scaled for RE 0.4mm. Max fn ≤ RE/2 for best Ra. Start at lower values until chip form is stable.</p></div>
+    <div class="cb"><div class="tscroll"><table class="ctbl"><thead><tr><th>Material Group</th><th>Hardness</th><th>Vc (m/min)</th><th>fn mm/rev (RE=0.4)</th><th>ap (mm)</th><th>Coolant</th></tr></thead><tbody><tr><td class="mc"><span class="dot"></span>Grey CI GG25/GG30 (K1)</td><td>180–240 HB</td><td class="vc">250–400</td><td>0.08–0.25</td><td>0.3–3.5</td><td>Dry</td></tr><tr><td class="mc"><span class="dot"></span>Ductile CI GGG50 (K2)</td><td>180–260 HB</td><td class="vc">180–300</td><td>0.08–0.20</td><td>0.3–3</td><td>Dry / Optional</td></tr></tbody></table></div><p class="cut-note">● Vc=cutting speed · fn=feed/rev · ap=depth of cut ⚠ fn scaled for RE 0.4mm. Max fn ≤ RE/2 for best Ra. Start at lower values until chip form is stable.</p></div>
   </div>
 
   <div class="card">
     <div class="ch"><div class="cd"></div><div class="ct">Insert Geometry</div></div>
     <div class="cb">
       <table class="st"><tr><td>Shape</td><td>D — 55° Diamond</td></tr><tr><td>Point Angle</td><td>55°</td></tr><tr><td>Rake</td><td>Negative (0° clearance)</td></tr><tr><td>Inscribed Circle</td><td>12.7 mm</td></tr><tr><td>Thickness (S)</td><td>6.35 mm</td></tr><tr><td>Edge Length (LE)</td><td>15.0 mm</td></tr><tr><td>Corner Radius (RE)</td><td>0.4 mm</td></tr><tr><td>Cutting Edges</td><td>4</td></tr><tr><td>Hole Diameter (D1)</td><td>5.16 mm</td></tr><tr><td>ISO Designation</td><td>DNMG150604</td></tr></table>
-      <div class="ng">RE 0.4 mm: Typical surface Ra 0.8–1.6 µm.</div>
+      <div class="hl2">Feed vs finish — theoretical Ra at RE 0.4</div><table class="st"><tr><td>fn 0.10 mm/rev</td><td>Ra 0.8 µm — fine finish</td></tr><tr><td>fn 0.15 mm/rev</td><td>Ra 1.8 µm — finish</td></tr><tr><td>fn 0.20 mm/rev</td><td>Ra 3.1 µm — semi-finish</td></tr><tr><td>fn 0.25 mm/rev</td><td>Ra 4.9 µm — general</td></tr></table>
+      <div class="ng">Ra = fn²/(32·RE). For finish passes keep fn ≤ 0.20 — beyond that the 0.4 mm nose geometry dominates the surface.</div>
     </div>
   </div>
 
@@ -167,7 +168,20 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
     </div>
   </div>
 
-  <div class="card full">
+  
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Setup &amp; First Cut</div></div>
+    <div class="cb"><table class="st"><tr><td>First cut</td><td>Vc 260 · fn 0.20 · ap 2</td></tr><tr><td>Interrupted / scaled skin</td><td>Vc 208 · keep fn steady · ap below skin</td></tr><tr><td>Tool overhang</td><td>≤ 1.5 × shank height</td></tr><tr><td>Finish pass</td><td>fn ≤ 0.20 · ap 0.3–0.8</td></tr><tr><td>Coolant</td><td>Flood aids chip control and size hold</td></tr></table>
+      <div class="ng"><strong>Why start here:</strong> mid-range Vc with moderate feed shows chip form and wear behaviour fast — then push Vc for productivity or drop fn for finish.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><div class="cd"></div><div class="ct">Troubleshooting</div></div>
+    <div class="cb"><table class="st"><tr><td>Rapid flank wear</td><td>Reduce Vc 15–20%</td></tr><tr><td>Built-up edge</td><td>Raise Vc, or raise fn slightly</td></tr><tr><td>Edge chipping</td><td>Lower fn · shorten overhang · check clamp torque</td></tr><tr><td>Poor finish</td><td>Raise Vc · drop fn ≤ RE/2 · inspect nose wear</td></tr><tr><td>Chip snarling</td><td>Raise fn · keep ap ≥ 0.5 so chipbreaker engages</td></tr></table>
+      <div class="nw"><strong>Vibration?</strong> Biggest cause is overhang. Halving overhang stiffens the setup 8&times; (stiffness &prop; 1/L&sup3;) &mdash; fix that before touching cutting data.</div></div>
+  </div>
+
+<div class="card full">
     <div class="ch"><div class="cd"></div><div class="ct">Part Information</div></div>
     <div class="cb">
       <table class="st">
@@ -177,7 +191,7 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
         <tr><td>Pack Quantity</td><td>10 pcs / box</td></tr>
       </table>
       <div class="hl2">Compatible Holders</div><table class="st"><tr><td>MDJNR/MDJNL 2020K15</td><td>Compatible holder</td></tr><tr><td>PDNNR/PDNNL 2020K15</td><td>Compatible holder</td></tr></table>
-      <div class="cl2">🔩 Clamping Screw — M5 × 12 mm — M5 × 12 mm · Torx T25 · 3.5–5.0 Nm — Use calibrated torque wrench. Loose insert shifts tip radius and damages surface finish.</div>
+      <div class="cl2">🔩 Clamping Screw — M5 × 12 mm· · Torx T25 · 3.5–5.0 Nm — Use calibrated torque wrench. Loose insert shifts tip radius and damages surface finish.</div>
     </div>
   </div>
 </main>
@@ -192,7 +206,7 @@ footer{border-top:1px solid var(--brd);background:#111316;padding:11px clamp(14p
 
 <footer>
   <div class="fl">TOOLFLUX</div>
-  <div class="fn">TF-DNMG150604-TFX-TKC15 · REV 01.0 · JUNE 2026<br>Cutting data indicative — verify on machine before production use.</div>
+  <div class="fn">TF-DNMG150604-TFX-TKC15 · REV 01.1 · JULY 2026<br>Cutting data indicative — verify on machine before production use.</div>
   <div class="fu">toolflux.co.in</div>
 </footer>
 <script>
